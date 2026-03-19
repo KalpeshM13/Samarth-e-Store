@@ -1,0 +1,515 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="desktop_landing.js"></script>
+    <link rel="stylesheet" href="desktop_landing.css" />
+    <script src="../cart.js"></script>
+  </head>
+  <body class="bg-surface font-body text-on-surface antialiased">
+    <!-- Top Navigation Bar -->
+    <header class="w-full top-0 z-50 no-border bg-[#f2f4f5] dark:bg-slate-800">
+      <nav
+        class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto font-manrope text-lg tracking-tight"
+      >
+        <div
+          class="text-2xl font-bold tracking-tighter text-[#003331] dark:text-white"
+        >
+          Samarth e-Store
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="text-[#003331] dark:text-white border-b-2 border-[#003331] pb-1 transition-all"
+            href="javascript:void(0);"
+            >Shop All</a
+          >
+          <a
+            class="text-[#3f4948] dark:text-slate-400 hover:text-[#003331] transition-colors duration-300"
+            href="javascript:void(0);"
+            >New Arrivals</a
+          >
+          <a
+            class="text-[#3f4948] dark:text-slate-400 hover:text-[#003331] transition-colors duration-300"
+            href="javascript:void(0);"
+            >Collections</a
+          >
+          <a
+            class="text-[#3f4948] dark:text-slate-400 hover:text-[#003331] transition-colors duration-300"
+            href="javascript:void(0);"
+            >Journal</a
+          >
+        </div>
+        <div class="flex items-center gap-6">
+          <button
+            class="text-[#003331] dark:text-[#004b49] scale-95 active:opacity-80 transition-all"
+          >
+            <span class="material-symbols-outlined" data-icon="person"
+              >person</span
+            >
+          </button>
+          <button
+            class="text-[#003331] dark:text-[#004b49] scale-95 active:opacity-80 transition-all relative"
+          >
+            <span class="material-symbols-outlined" data-icon="shopping_cart"
+              >shopping_cart</span
+            >
+            <span
+              class="absolute -top-2 -right-2 bg-primary text-on-primary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-label"
+              >2</span
+            >
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section: Intentional Asymmetry & Bleed -->
+      <section
+        class="relative min-h-[870px] flex items-center overflow-hidden bg-surface"
+      >
+        <div
+          class="container mx-auto px-12 grid grid-cols-12 gap-8 items-center py-20"
+        >
+          <div class="col-span-12 md:col-span-5 z-10">
+            <span
+              class="font-label text-sm font-semibold tracking-widest text-primary-container mb-4 block"
+              >ESTABLISHED 2026</span
+            >
+            <h1
+              class="font-headline text-6xl md:text-7xl font-extrabold tracking-tighter leading-[1.1] text-primary mb-8"
+            >
+              The Quiet Art of <br />Living Well.
+            </h1>
+            <p
+              class="font-body text-lg text-on-surface-variant max-w-md mb-10 leading-relaxed"
+            >
+              Curated architectural pieces designed for the modern atelier.
+              Where minimalism meets meticulous craftsmanship.
+            </p>
+            <div class="flex items-center gap-6">
+              <button
+                class="bg-primary text-on-primary px-10 py-4 rounded-md font-semibold tracking-wide shadow-lg hover:bg-primary-container transition-all"
+              >
+                Shop The Collection
+              </button>
+              <button
+                class="text-primary font-semibold flex items-center gap-2 group"
+              >
+                Our Story
+                <span
+                  class="w-12 h-[1px] bg-primary group-hover:w-16 transition-all"
+                ></span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="col-span-12 md:col-span-7 relative h-[600px] md:h-[800px]"
+          >
+            <div
+              class="absolute inset-0 bg-surface-container-high rounded-xl overflow-hidden translate-x-12 translate-y-12"
+            ></div>
+            <img
+              alt="Modern minimalist interior with sculptural furniture"
+              class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-2xl z-20"
+              data-alt="Minimalist modern room with architectural chair and soft lighting"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuANpfbPdmb6MCrB-O5B2Nojz_F51BUs837JRcMGXlYf2spXk-vC20TliIV9Qq4TBp4eXqQkhTHep6wXJxnkbpH4hBGg3HHKIrWjDGvtuEXNZQV0UPzNpTbuYzPqOjoq7d71l9cnXragMaaoEPo-0ufxOBTXHoLgPgqJxJDk5-9dHkaEInajwYjzuZAAt9otjfcfdR5g7iHXU5cDBCXIkv3CUChEAO5PX2uFaCNqKdVJIFdWJ5_iUJiBTpjqtNu0mls6gU12TsSziFM"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Featured Collections: Bento Grid Layout -->
+      <section class="py-32 bg-surface-container-low">
+        <div class="container mx-auto px-12">
+          <div class="flex justify-between items-end mb-16">
+            <div>
+              <h2
+                class="font-headline text-4xl font-bold tracking-tight text-primary"
+              >
+                Featured Collections
+              </h2>
+              <p class="text-on-surface-variant mt-2 font-label">
+                EXPLORE OUR SEASONAL EDIT
+              </p>
+            </div>
+            <a
+              class="text-primary font-bold border-b-2 border-primary pb-1"
+              href="javascript:void(0);"
+              >View All</a
+            >
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[800px]"
+          >
+            <!-- Large Feature Card -->
+            <div
+              class="md:col-span-2 md:row-span-2 bg-surface-container-lowest rounded-xl overflow-hidden group relative"
+            >
+              <img
+                alt="Pendant lighting collection"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                data-alt="Modern geometric pendant lights hanging in a dark room"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrAfIZLJ8SL8grOBhfQ0lwoC4ir1rdBrjO2rsL0YVpgUpdX9GhWwwVO03EJob7DSL_dBS_YlfOAXigkeHVC4K_vQFk1vHJ2MoKR1kz9wN9LdWFG9Ox4gOXZqYyB0fjpg1kGIW3CrONZQv2G6B_qUrPwkL5llOWoEZfIE7wlHsb4wLfyZtQkyzEwInFR1ys7-2icpTXvyVv5WrlSloL-511tER0SZI17n0M4F_n7mLk7xpvtlIU3lpnsS3II_vuGVhc2-ExhbJNVEo"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-primary/80 to-transparent text-on-primary"
+              >
+                <h3 class="text-2xl font-bold">Luminescence Series</h3>
+                <p class="opacity-90 mt-2 font-label">SCULPTURAL LIGHTING</p>
+              </div>
+            </div>
+            <!-- Secondary Card -->
+            <div
+              class="md:col-span-2 bg-surface-container-lowest rounded-xl overflow-hidden group relative"
+            >
+              <img
+                alt="Minimalist seating"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                data-alt="Brutalist concrete chair in a gallery setting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8lZEjJzP-Za9kcx7Ir0htS0n-1fYxDb9TfcM3GK6Ko7zSHhHCnMMoQDvceVb0XEMpHgzUDHtgqmXET3h2D9hYjeIqtlheVzu09pr3aLB9Si0zo6qDnyUazxuuqfPfm6KIvVNGHs3OO0FOlBnfM_R_OrPorbSjWSC4Eu1NxKy1gQR4TNv4_7ACjhHn3kZqVYtxudA87QrUzjYx1xWmVe86WFUwTSjHuI-cuSWhSWHUrArEZXkeBkTbxU8H_Dcp-2ebCofzeyFnqMM"
+              />
+              <div
+                class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+              >
+                <button
+                  class="bg-surface-container-lowest text-primary px-6 py-3 rounded-md font-bold"
+                >
+                  The Seating Edit
+                </button>
+              </div>
+            </div>
+            <!-- Small Card 1 -->
+            <div
+              class="bg-surface-container-lowest rounded-xl overflow-hidden group relative"
+            >
+              <img
+                alt="Ceramic collection"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                data-alt="Handcrafted matte black ceramic vases on a stone shelf"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8ILn9YoaJZYjuzxxC202Z3d-Biy-zmw1hUG-uBbs55IWtXPPBsgbtzvKBewxiFUG6eKkbpq2KNpLtmi9IIWijbNi24ErqCp9rMeop6rvx9PRDCoUbr9Ojh5-gypkQAubr26oGoYo3rwjJ1-MWWC9V3H8W_zE3dcECONja3BHaaMYSEZDo_IoehH3CYsVS8uEDeafxCzhcxY_0ILLuJeBUqjIeJQxH1jwDE9v13yXc3us8CLnTYwYaIoTRPlG_y6NSlXZtBXe8ads"
+              />
+              <div class="absolute bottom-4 left-4">
+                <span
+                  class="bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 text-xs font-bold tracking-widest text-primary uppercase"
+                  >Objects</span
+                >
+              </div>
+            </div>
+            <!-- Small Card 2 -->
+            <div
+              class="bg-surface-container-lowest rounded-xl overflow-hidden group relative"
+            >
+              <img
+                alt="Home Textiles"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                data-alt="Close up of organic linen fabric with natural texture"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2ZJPcyrlu4hTq3a0SPwneOca0mIh-FZmYqzA2IJ3dU1DiRg5cIk6cERvnMY_AnsMeBdIuDKP4bnwIstZC9aOWQDI_aRFe6pOZhBKcaCj5HpySYdpZrpu74LAx1LpV1QgTdBgdBsoF20qSjsNhTtZMWcrz2BO81PJ3XfNisppuDXy2Umq0-CYFpzDsWvVTwzvoc0Gcqi_s2m3bOm1B1DJ7PItkRfW624j95WI2SpCQqZczwRzsg1H_QMOXG7RPEHrsi5HB_FlkjEM"
+              />
+              <div class="absolute bottom-4 left-4">
+                <span
+                  class="bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 text-xs font-bold tracking-widest text-primary uppercase"
+                  >Textiles</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Brand Values: Tonal Layering & Typography -->
+      <section class="py-40 bg-surface">
+        <div class="container mx-auto px-12">
+          <div class="grid grid-cols-12 gap-16 items-center">
+            <div class="col-span-12 md:col-span-6 order-2 md:order-1">
+              <div class="relative">
+                <div
+                  class="absolute -top-10 -left-10 w-40 h-40 bg-secondary-container rounded-full mix-blend-multiply opacity-30"
+                ></div>
+                <img
+                  alt="Artisan at work"
+                  class="relative z-10 w-full h-[500px] object-cover rounded-xl shadow-xl"
+                  data-alt="Craftsman hands working with raw natural wood material"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn2nQGlkBdpYcNMt2s_CF1frDfD03yAeKvx12xmYxlYNEd7lEW1Yoca3Uka-ZzSHOt9vl4XHYbo4EpA_WYW2dM0RXA3pe1oqgtycl217gM28wuYfYUzdcnLXJyZToZvOPNYjLcED5Y5MBJ-vblIlFVNydK5XatzJTnBNg6QDhyF3eWwRIA33AllriqNNOlXom4uRJxgJ9epRTEqiNqOxPcOOp-avQ6uQKJVQCz8HAb8myjS75h05dW_cH8gwi919hssKd8BzOG424"
+                />
+              </div>
+            </div>
+            <div class="col-span-12 md:col-span-6 order-1 md:order-2">
+              <h2
+                class="font-headline text-5xl font-extrabold text-primary mb-12 leading-tight"
+              >
+                Sustainability through <br />Permanence.
+              </h2>
+              <div class="space-y-12">
+                <div class="flex gap-6">
+                  <span
+                    class="material-symbols-outlined text-primary text-3xl shrink-0"
+                    data-icon="forest"
+                    >forest</span
+                  >
+                  <div>
+                    <h4 class="text-xl font-bold text-primary mb-2">
+                      Ethical Sourcing
+                    </h4>
+                    <p class="text-on-surface-variant leading-relaxed">
+                      We partner exclusively with FSC-certified forests and
+                      local artisans who respect the lineage of their materials.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-6">
+                  <span
+                    class="material-symbols-outlined text-primary text-3xl shrink-0"
+                    data-icon="handyman"
+                    >handyman</span
+                  >
+                  <div>
+                    <h4 class="text-xl font-bold text-primary mb-2">
+                      Craftsmanship First
+                    </h4>
+                    <p class="text-on-surface-variant leading-relaxed">
+                      Each piece is hand-finished in our London workshop,
+                      ensuring a level of detail that industrial processes
+                      cannot replicate.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-6">
+                  <span
+                    class="material-symbols-outlined text-primary text-3xl shrink-0"
+                    data-icon="eco"
+                    >eco</span
+                  >
+                  <div>
+                    <h4 class="text-xl font-bold text-primary mb-2">
+                      Zero-Waste Promise
+                    </h4>
+                    <p class="text-on-surface-variant leading-relaxed">
+                      Our production cycle utilizes every off-cut, repurposing
+                      excess material into limited-edition home accessories.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Product Highlight: Glassmorphism Quick-Bar concept -->
+      <section class="py-24 bg-surface-container-high overflow-hidden">
+        <div class="container mx-auto px-12">
+          <div
+            class="bg-surface-container-lowest rounded-2xl flex flex-col md:flex-row overflow-hidden shadow-sm"
+          >
+            <div class="md:w-1/2 p-16 flex flex-col justify-center">
+              <span
+                class="text-xs font-bold tracking-[0.2em] text-on-surface-variant mb-4 uppercase"
+                >New Arrival</span
+              >
+              <h2 class="font-headline text-4xl font-bold text-primary mb-6">
+                The Atrium Lounge Chair
+              </h2>
+              <p class="text-on-surface-variant text-lg mb-8 leading-relaxed">
+                A study in curves and comfort. Upholstered in raw Belgian linen
+                with a solid walnut frame. Designed to be the centerpiece of any
+                contemporary workspace.
+              </p>
+              <div
+                class="flex items-center justify-between p-6 bg-surface-container-low rounded-xl"
+              >
+                <div>
+                  <span
+                    class="text-xs font-label text-on-surface-variant block mb-1"
+                    >PRICE</span
+                  >
+                  <span class="text-2xl font-bold text-primary">$2,450.00</span>
+                </div>
+                <button
+                  class="bg-primary text-on-primary px-8 py-3 rounded-md font-bold flex items-center gap-2"
+                >
+                  <span
+                    class="material-symbols-outlined text-sm"
+                    data-icon="shopping_bag"
+                    >shopping_bag</span
+                  >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+            <div class="md:w-1/2 relative min-h-[500px]">
+              <img
+                alt="Atrium Lounge Chair"
+                class="absolute inset-0 w-full h-full object-cover"
+                data-alt="Elegant lounge chair with walnut frame and neutral fabric"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAubd58R2l4c20DubmQtjVwnqNqfYtk02_s4F6JRkbZlJ3pNCgWlAIalFoIYdNv3ADHOBE497G6k1GiebBWdpkg5Q9wa6JVQ3taXx-HtxOpHyJCTLDWqSzutvUY-Kn9s8KBVNPaholFKqVCnxZLiRCQ-jF67uaKua_KbXcA4jDaFLr2Q5CxbNrKT7omqBy5_os6eWnwm5AkR0i8LmerPQ21-pF8gNbXPdtf8awbQ6WCKSqnlbru9wL8HFknFxWqb1Xoxi_5iLQJVXQ"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer: Tonal Shift -->
+    <footer class="w-full mt-20 bg-[#d8dadb] dark:bg-slate-950">
+      <div
+        class="flex flex-col md:flex-row justify-between items-start px-12 py-16 gap-12 max-w-[1920px] mx-auto font-manrope text-sm tracking-wide"
+      >
+        <div class="max-w-xs">
+          <div class="text-xl font-bold text-[#003331] dark:text-white mb-6">
+            Samarth e-Store
+          </div>
+          <p class="text-[#3f4948] dark:text-slate-500 leading-relaxed mb-8">
+            Crafting timeless environments through intentional design and
+            sustainable mastery.
+          </p>
+          <div class="flex gap-4">
+            <a
+              class="text-[#003331] hover:opacity-70 transition-opacity"
+              href="javascript:void(0);"
+              ><span class="material-symbols-outlined" data-icon="public"
+                >public</span
+              ></a
+            >
+            <a
+              class="text-[#003331] hover:opacity-70 transition-opacity"
+              href="javascript:void(0);"
+              ><span class="material-symbols-outlined" data-icon="mail"
+                >mail</span
+              ></a
+            >
+          </div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+          <div class="flex flex-col gap-4">
+            <h5
+              class="font-bold text-[#003331] uppercase tracking-widest text-xs"
+            >
+              Shop
+            </h5>
+            <a
+              class="text-[#3f4948] dark:text-slate-500 hover:underline decoration-2 underline-offset-4 transition-opacity"
+              href="javascript:void(0);"
+              >Furniture</a
+            >
+            <a
+              class="text-[#3f4948] dark:text-slate-500 hover:underline decoration-2 underline-offset-4 transition-opacity"
+              href="javascript:void(0);"
+              >Lighting</a
+            >
+            <a
+              class="text-[#3f4948] dark:text-slate-500 hover:underline decoration-2 underline-offset-4 transition-opacity"
+              href="javascript:void(0);"
+              >Accessories</a
+            >
+          </div>
+          <div class="flex flex-col gap-4">
+            <h5
+              class="font-bold text-[#003331] uppercase tracking-widest text-xs"
+            >
+              About
+            </h5>
+            <a
+              class="text-[#3f4948] dark:text-slate-500 hover:underline decoration-2 underline-offset-4 transition-opacity"
+              href="javascript:void(0);"
+              >Sustainability</a
+            >
+            <a
+              class="text-[#3f4948] dark:text-slate-500 hover:underline decoration-2 underline-offset-4 transition-opacity"
+              href="javascript:void(0);"
+              >Craftsmanship</a
+            >
+            <a
+              class="text-[#3f4948] dark:text-slate-500 hover:underline decoration-2 underline-offset-4 transition-opacity"
+              href="javascript:void(0);"
+              >Journal</a
+            >
+          </div>
+          <div class="flex flex-col gap-4">
+            <h5
+              class="font-bold text-[#003331] uppercase tracking-widest text-xs"
+            >
+              Help
+            </h5>
+            <a
+              class="text-[#3f4948] dark:text-slate-500 hover:underline decoration-2 underline-offset-4 transition-opacity"
+              href="javascript:void(0);"
+              >Shipping &amp; Returns</a
+            >
+            <a
+              class="text-[#3f4948] dark:text-slate-500 hover:underline decoration-2 underline-offset-4 transition-opacity"
+              href="javascript:void(0);"
+              >Privacy Policy</a
+            >
+            <a
+              class="text-[#3f4948] dark:text-slate-500 hover:underline decoration-2 underline-offset-4 transition-opacity"
+              href="javascript:void(0);"
+              >Contact</a
+            >
+          </div>
+        </div>
+        <div class="w-full md:w-auto">
+          <h5
+            class="font-bold text-[#003331] uppercase tracking-widest text-xs mb-4"
+          >
+            <br />
+          </h5>
+          <div class="flex border-b border-[#003331] pb-2">
+            <input
+              class="bg-transparent border-none focus:ring-0 text-sm w-full font-label"
+              placeholder="email@address.com"
+              type="email"
+            />
+            <button
+              class="text-[#003331] font-bold text-xs uppercase tracking-widest"
+            >
+              <br />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="px-12 py-8 border-t border-[#bfc8c7]/20 flex justify-between items-center max-w-[1920px] mx-auto text-[10px] text-[#3f4948] uppercase tracking-widest"
+      >
+        <span class="">© 2024 Samarth e-Store. All rights reserved.</span>
+        <span class="">Handcrafted for the Modern Mind.</span>
+      </div>
+    </footer>
+    <!-- Floating Navigation (Mobile Only) -->
+    <div
+      class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 glass-nav rounded-full px-6 py-4 shadow-2xl z-[100] flex gap-8 items-center border border-white/20"
+    >
+      <a class="text-primary" href="javascript:void(0);"
+        ><span
+          class="material-symbols-outlined"
+          data-icon="home"
+          style="font-variation-settings: &quot;FILL&quot; 1"
+          >home</span
+        ></a
+      >
+      <a class="text-on-surface-variant" href="javascript:void(0);"
+        ><span class="material-symbols-outlined" data-icon="search"
+          >search</span
+        ></a
+      >
+      <a class="text-on-surface-variant" href="javascript:void(0);"
+        ><span class="material-symbols-outlined" data-icon="shopping_bag"
+          >shopping_bag</span
+        ></a
+      >
+      <a class="text-on-surface-variant" href="javascript:void(0);"
+        ><span class="material-symbols-outlined" data-icon="person"
+          >person</span
+        ></a
+      >
+    </div>
+  </body>
+</html>

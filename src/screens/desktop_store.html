@@ -1,0 +1,460 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Inter:wght@300..600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="desktop_store.js"></script>
+    <link rel="stylesheet" href="desktop_store.css" />
+    <script src="../cart.js"></script>
+  </head>
+
+  <body class="bg-surface text-on-surface">
+    <!-- TopNavBar -->
+    <header class="w-full top-0 z-50 no-border bg-[#f2f4f5] dark:bg-slate-800">
+      <nav
+        class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto"
+      >
+        <div class="flex items-center gap-12">
+          <a
+            class="text-2xl font-bold tracking-tighter text-[#003331] dark:text-white"
+            href="javascript:void(0);"
+            >Samarth e-Store</a
+          >
+          <div class="hidden md:flex gap-8 items-center">
+            <a
+              class="font-manrope text-lg tracking-tight text-[#003331] dark:text-white border-b-2 border-[#003331] pb-1 hover:text-[#003331] transition-colors duration-300"
+              href="/index.html"
+              >Home</a
+            >
+          </div>
+          <div class="hidden md:flex gap-8 items-center">
+            <a
+              class="font-manrope text-lg tracking-tight text-[#003331] dark:text-white border-b-2 border-[#003331] pb-1 hover:text-[#003331] transition-colors duration-300"
+              href="javascript:void(0);"
+              >Shop All</a
+            >
+          </div>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="relative hidden lg:block">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm"
+              >search</span
+            >
+            <input
+              class="bg-surface-container-high border-none rounded-full pl-10 pr-4 py-2 text-sm font-label focus:ring-1 focus:ring-primary w-64"
+              placeholder="Search curated pieces..."
+              type="text"
+            />
+          </div>
+          <div
+            class="flex items-center gap-4 text-[#003331] dark:text-[#004b49]"
+          >
+            <button class="scale-95 active:opacity-80 transition-all">
+              <span class="material-symbols-outlined" data-icon="person"
+                >person</span
+              >
+            </button>
+            <button class="scale-95 active:opacity-80 transition-all relative">
+              <span class="material-symbols-outlined" data-icon="shopping_cart"
+                >shopping_cart</span
+              >
+              <span
+                class="absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold"
+                >2</span
+              >
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="max-w-[1920px] mx-auto px-12 pt-12">
+      <!-- Hero Section / Breadcrumbs -->
+      <div class="mb-16">
+        <div
+          class="flex items-center gap-2 text-xs font-label text-on-surface-variant mb-4 uppercase tracking-widest"
+        >
+          <span class="">Home</span>
+          <span class="material-symbols-outlined text-[10px]"
+            >chevron_right</span
+          >
+          <span class="text-on-surface">Shop All</span>
+        </div>
+        <h1
+          class="text-6xl font-headline font-bold tracking-tighter text-on-surface max-w-2xl leading-[0.9]"
+        >
+          Refined Essentials for the Modern Space.
+        </h1>
+      </div>
+      <div class="flex flex-col md:flex-row gap-12">
+        <!-- Product Grid -->
+        <section class="flex-grow">
+          <!-- Toolbar -->
+          <div class="flex justify-between items-center mb-10 pb-6 bg-surface">
+            <p class="font-label text-sm text-on-surface-variant">
+              Showing curated items
+            </p>
+            <div class="flex items-center gap-6">
+              <button
+                class="flex items-center gap-2 font-label text-sm text-on-surface border-b border-on-surface pb-1"
+              >
+                Sort by: Newest
+                <span class="material-symbols-outlined text-sm"
+                  >keyboard_arrow_down</span
+                >
+              </button>
+            </div>
+          </div>
+          <!-- Bento-Inspired Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16"
+          >
+            <!-- Product 1 -->
+            <div class="group cursor-pointer">
+              <div
+                class="relative aspect-[4/5] mb-6 overflow-hidden rounded-xl bg-surface-container-low"
+              >
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Minimalist wooden lounge chair in a gallery setting"
+                  src="https://m.media-amazon.com/images/I/71Q9Ur32OOL._SL1500_.jpg"
+                />
+                <button
+                  class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-xl"
+                    data-icon="favorite"
+                    >favorite</span
+                  >
+                </button>
+                <div
+                  class="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+                >
+                  <button
+                    class="w-full bg-primary text-on-primary py-3 text-xs font-label uppercase tracking-widest rounded-md"
+                  >
+                    <a href="https://amzn.to/4dv5LSG" target="_blank">Buy Now</a>
+                  </button>
+                </div>
+              </div>
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3
+                    class="font-headline font-bold text-lg text-on-surface mb-1"
+                  >
+                    LG Smart Choice, Washing Machine 
+                  </h3>
+                  <p class="font-label text-xs text-on-surface-variant">
+                    LG Electornics
+                  </p>
+                </div>
+                <span class="font-headline font-medium text-lg">₹38,990</span>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="group cursor-pointer">
+              <div
+                class="relative aspect-[4/5] mb-6 overflow-hidden rounded-xl bg-surface-container-low"
+              >
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Sleek black architectural floor lamp"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlczWlngE--B2MFAEsJ8XTgxjb0vk7cbMfRFPAcbLWnkEz6oC9LWgCjE8z6-5jUvrMx7EuFYE_BpEH3F8Qn07z6SYQL76ntjHijIDmgdJvzWGifsLaNTeMKkP4-cSuzg8dC6LacUana8V0s_Koh92ag6YFluo_Ts18b9JRX0DJ3EvF62Gjvx0vLSZRe1P_C1Wb6zOWK6fY7M5IsIRc2DkgFEj62kl7d4dRqqMYbGG9s1bPyeblpFb6CDYgT-AJBLQwwZKpTqGDezQ"
+                />
+                <button
+                  class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-xl"
+                    data-icon="favorite"
+                    >favorite</span
+                  >
+                </button>
+              </div>
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3
+                    class="font-headline font-bold text-lg text-on-surface mb-1"
+                  >
+                    Arcus Floor Lamp
+                  </h3>
+                  <p class="font-label text-xs text-on-surface-variant">
+                    Lighting • Matte Black
+                  </p>
+                </div>
+                <span class="font-headline font-medium text-lg">$890</span>
+              </div>
+            </div>
+            <!-- Product 3 - Featured Wide Card (Asymmetric) -->
+            <div class="group cursor-pointer lg:col-span-1">
+              <div
+                class="relative aspect-[4/5] mb-6 overflow-hidden rounded-xl bg-surface-container-low"
+              >
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Handcrafted ceramic vase with organic textures"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6XmVt2jF4lqD5RZyvSNKKD9wF73gv3tMI6X_QkTyPwdDGFwGU7OpcEM51zLYGDTkeXkttEzBbESDG4OgSioije-osPpmbFIm4Vs03NJbg9j-TZ91R-vPkajsM3HGep2fj7N1NIQKlgeL3raTYLmBIgsqxZGrW-XcX9FvDn-NYIX0AlH1gt_wD5pqS2pNNLZ1DMjMBKX1G9g0kEl7s1hWLsbeyO4Lc4N8WuODG7a_CRTRMpTEWbbPdr9aIZG2VbdhZhXWAuRGs1jA"
+                />
+              </div>
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3
+                    class="font-headline font-bold text-lg text-on-surface mb-1"
+                  >
+                    Terra Vessel No. 04
+                  </h3>
+                  <p class="font-label text-xs text-on-surface-variant">
+                    Objects • Artisanal Clay
+                  </p>
+                </div>
+                <span class="font-headline font-medium text-lg">$320</span>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="group cursor-pointer">
+              <div
+                class="relative aspect-[4/5] mb-6 overflow-hidden rounded-xl bg-surface-container-low"
+              >
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Minimalist white marble side table"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ9W-31hBW3b_MfYZ9MndpW_eoWDYNyWX9X1GVwI4ycV0vaXF8Ssd8fOqGPgU3iJ_Ub81hng8dT7kvPHjYXHBSDkeGdzDrLrN42MsuzrnjkP68p2Kt-D46LIx3RehfkEyNvOBCOnHn14mS7S6TIQwafcgwJ_VKapzHY3bhsSLWaVcVcRv4sF3Evw8s6Md6Hy_ka51ajc6DS4ef_aGmHGGKtN-KSfQIu_HuKzHYWm4nQYiA1BRd2amOsdWaolRboIeVSBaV0Coio4M"
+                />
+              </div>
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3
+                    class="font-headline font-bold text-lg text-on-surface mb-1"
+                  >
+                    Carrara Monolith
+                  </h3>
+                  <p class="font-label text-xs text-on-surface-variant">
+                    Furniture • Italian Marble
+                  </p>
+                </div>
+                <span class="font-headline font-medium text-lg">$2,100</span>
+              </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="group cursor-pointer">
+              <div
+                class="relative aspect-[4/5] mb-6 overflow-hidden rounded-xl bg-surface-container-low"
+              >
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Deep emerald velvet sofa detail"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWe7a_uRxeJhFGq_6i2my5nOg86_Gq7Y1zkqwX1k2DFroNJrqKpOlxn2g099Co-O5S0XZnPfS46wE27e8sLYWAj6ZPf_D_t-bExLUJ6cruYIZPlR2xWqnBGXqQh05cGweJim_lU2foD-DAvMYUZxnwZS5quTW5ER8ey30n3r5O2hsWIh7I8uII90sd5zmYzfVuimpRs2czY_rI1bi76lTdeo99aTvTPl-eflK5FD8-Du8RA3H4fTbluQTWIEsg7mzYZMvO7WGvXa0"
+                />
+                <div class="absolute top-4 left-4">
+                  <span
+                    class="bg-primary text-on-primary px-3 py-1 rounded-full text-[10px] font-label uppercase tracking-widest"
+                    >Limited Edition</span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3
+                    class="font-headline font-bold text-lg text-on-surface mb-1"
+                  >
+                    Velvet Retreat
+                  </h3>
+                  <p class="font-label text-xs text-on-surface-variant">
+                    Furniture • Deep Emerald
+                  </p>
+                </div>
+                <span class="font-headline font-medium text-lg">$4,500</span>
+              </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="group cursor-pointer">
+              <div
+                class="relative aspect-[4/5] mb-6 overflow-hidden rounded-xl bg-surface-container-low"
+              >
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Architectural wall clock with brass hands"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSEla97hXqQeb_lGNqehCEEhVHpQXLWJAeUIUQM9PnvGeS5DEWNFuLXEi9e8CFRLioK5oJi5CZdGXiPw4E9xtsPYw5RK-qFVRKoATPo_HQFalK4J1zg0JG3LnYQhbLVkuYfEn2vgaaWknmkXPnmy-FB78YGMuyJopaf9WubiJHw7Ew5vbuOeSMDxqb69Vxsf_v8K-FG0WVRjFT4seU-gj5teha44l_AdMIPXM29HTL-owrP6OfS2h6uZNf7U8gjykhjPeasd0hv4I"
+                />
+              </div>
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3
+                    class="font-headline font-bold text-lg text-on-surface mb-1"
+                  >
+                    Tempo Wall Marker
+                  </h3>
+                  <p class="font-label text-xs text-on-surface-variant">
+                    Objects • Brushed Brass
+                  </p>
+                </div>
+                <span class="font-headline font-medium text-lg">$450</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-20 bg-[#d8dadb] dark:bg-slate-950">
+      <div
+        class="flex flex-col md:flex-row justify-between items-start px-12 py-16 gap-8 max-w-[1920px] mx-auto"
+      >
+        <div class="space-y-6 max-w-sm">
+          <span class="text-xl font-bold text-[#003331] dark:text-white"
+            >Samarth e-Store</span
+          >
+          <p
+            class="font-manrope text-sm tracking-wide text-[#3f4948] dark:text-slate-500 leading-relaxed"
+          >
+            Curating a collection of timeless pieces for the discerning eye. Our
+            atelier focuses on material honesty and architectural integrity.
+          </p>
+          <div class="flex gap-4">
+            <span class="material-symbols-outlined text-primary cursor-pointer"
+              >public</span
+            >
+            <span class="material-symbols-outlined text-primary cursor-pointer"
+              >star_half</span
+            >
+            <span class="material-symbols-outlined text-primary cursor-pointer"
+              >mail</span
+            >
+          </div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+          <div class="space-y-4">
+            <h4
+              class="font-bold text-xs uppercase tracking-widest text-[#003331]"
+            >
+              Shop
+            </h4>
+            <nav
+              class="flex flex-col gap-2 font-manrope text-sm tracking-wide text-[#3f4948]"
+            >
+              <a
+                class="hover:underline decoration-2 underline-offset-4"
+                href="javascript:void(0);"
+                >Sustainability</a
+              >
+              <a
+                class="hover:underline decoration-2 underline-offset-4"
+                href="javascript:void(0);"
+                >Collections</a
+              >
+              <a
+                class="hover:underline decoration-2 underline-offset-4"
+                href="javascript:void(0);"
+                >New Arrivals</a
+              >
+            </nav>
+          </div>
+          <div class="space-y-4">
+            <h4
+              class="font-bold text-xs uppercase tracking-widest text-[#003331]"
+            >
+              Support
+            </h4>
+            <nav
+              class="flex flex-col gap-2 font-manrope text-sm tracking-wide text-[#3f4948]"
+            >
+              <a
+                class="hover:underline decoration-2 underline-offset-4"
+                href="javascript:void(0);"
+                >Shipping &amp; Returns</a
+              >
+              <a
+                class="hover:underline decoration-2 underline-offset-4"
+                href="javascript:void(0);"
+                >Contact</a
+              >
+              <a
+                class="hover:underline decoration-2 underline-offset-4"
+                href="javascript:void(0);"
+                >FAQ</a
+              >
+            </nav>
+          </div>
+          <div class="space-y-4">
+            <h4
+              class="font-bold text-xs uppercase tracking-widest text-[#003331]"
+            >
+              Legal
+            </h4>
+            <nav
+              class="flex flex-col gap-2 font-manrope text-sm tracking-wide text-[#3f4948]"
+            >
+              <a
+                class="hover:underline decoration-2 underline-offset-4"
+                href="javascript:void(0);"
+                >Privacy Policy</a
+              >
+              <a
+                class="hover:underline decoration-2 underline-offset-4"
+                href="javascript:void(0);"
+                >Terms of Service</a
+              >
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div
+        class="px-12 py-8 border-t border-black/5 max-w-[1920px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p
+          class="font-manrope text-sm tracking-wide text-[#3f4948] dark:text-slate-500"
+        >
+          © 2026&nbsp;Samarth e-Store. All rights reserved.
+        </p>
+        <div class="flex items-center gap-6">
+          <span class="text-xs font-label opacity-40 uppercase tracking-tighter"
+            ><br
+          /></span>
+        </div>
+      </div>
+    </footer>
+    <!-- Quick Action Mobile Glass Bar (Hidden on Desktop) -->
+    <div
+      class="md:hidden fixed bottom-6 left-6 right-6 h-16 bg-white/85 backdrop-blur-xl rounded-full shadow-2xl flex items-center justify-around px-8 z-[100] border border-white/20"
+    >
+      <button class="flex flex-col items-center gap-1 text-primary">
+        <span class="material-symbols-outlined">home</span>
+        <span class="text-[10px] font-label font-bold uppercase">Home</span>
+      </button>
+      <button class="flex flex-col items-center gap-1 text-primary">
+        <span
+          class="material-symbols-outlined"
+          style="font-variation-settings: &quot;FILL&quot; 1"
+          >grid_view</span
+        >
+        <span class="text-[10px] font-label font-bold uppercase">Shop</span>
+      </button>
+      <button
+        class="flex flex-col items-center gap-1 text-on-surface-variant opacity-60"
+      >
+        <span class="material-symbols-outlined">favorite</span>
+        <span class="text-[10px] font-label font-bold uppercase">Wishlist</span>
+      </button>
+      <button
+        class="flex flex-col items-center gap-1 text-on-surface-variant opacity-60"
+      >
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span class="text-[10px] font-label font-bold uppercase">Cart</span>
+      </button>
+    </div>
+  </body>
+</html>

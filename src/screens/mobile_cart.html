@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="mobile_cart.js"></script>
+<link rel="stylesheet" href="mobile_cart.css">
+
+    <script src="../cart.js"></script>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between px-4 h-16 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-100/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400">arrow_back</span>
+</button>
+<h1 class="font-['Inter'] font-semibold text-lg tracking-tight text-on-surface">Shopping Cart</h1>
+</div>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-100/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400">more_vert</span>
+</button>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 h-px w-full"></div>
+</header>
+<main class="max-w-screen-md mx-auto px-4 pt-6 pb-32 space-y-8">
+<!-- Cart Items Section -->
+<section class="space-y-4">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex gap-4 items-center group relative overflow-hidden transition-all duration-300 hover:shadow-md">
+<div class="w-24 h-24 rounded-lg overflow-hidden bg-surface-container-low flex-shrink-0">
+<img alt="Architect Tee" class="w-full h-full object-cover" data-alt="Minimalist white architect t-shirt on plain background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAECdg8uQghFBdBAhCZg4dxfh3oe0x5-E5rIa7Bcf8_v4LNNVpsPSPA9fyF2TTBx4d05mRBNBshbEfNvFhjlwshpjDTkssOzN_o3JLSgIUCJDpXuytm9eHqhTRWXeadaXEA1f7EgtuWmm2ViZ8emZ5cBxCF1fB9dif9V0BqDf2o9DiJ8xjCPBvtpoLouf8kzQk1rbSqVnopmx9alcbMA5NKh8pr1ORksQN26L8LHBppLbBibayN2ZBGxiGHYwPVVwNNT9Xm9p8k3iM"/>
+</div>
+<div class="flex-grow flex flex-col justify-between h-full py-1">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-semibold text-title-md text-on-surface">Architect Tee</h3>
+<button class="text-on-surface-variant hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<p class="text-on-surface-variant text-label-sm mt-0.5">Size: L • Color: Ghost White</p>
+</div>
+<div class="flex justify-between items-end mt-4">
+<span class="font-bold text-primary text-lg">$48.00</span>
+<div class="flex items-center bg-surface-container-highest rounded-full px-2 py-1 gap-3">
+<button class="w-6 h-6 flex items-center justify-center rounded-full bg-surface-container-lowest hover:bg-white active:scale-90 transition-all">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="font-semibold text-sm w-4 text-center">1</span>
+<button class="w-6 h-6 flex items-center justify-center rounded-full bg-primary text-on-primary hover:bg-primary-container active:scale-90 transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex gap-4 items-center group relative overflow-hidden transition-all duration-300 hover:shadow-md">
+<div class="w-24 h-24 rounded-lg overflow-hidden bg-surface-container-low flex-shrink-0">
+<img alt="Linear Studio Pants" class="w-full h-full object-cover" data-alt="Black modern tailored studio pants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfSlW72xoj2TuMaE16aA5uYP9u2qe-bkOGn3qHrAQb-JK3wPnivF26m9JINVV8_ruSN4bg1mxhJoHdMtrK5AM1wKF7pldF5Qcqd2I6I5TiAE2u6Cp-9kDTVypeo3efMaFuCfuImWwqp9JwSd9zsJCbC1lZQe69S1gFnOx9W1r11-ZKqLN85hafOLNmIAIoEbWl_Fvwyn9PN_v_xgsLOVbsWu_XqvROdJ2nBp6IZQl3CUJLCLBwNrNaBLp8VZwt1phx7uCCkloLM68"/>
+</div>
+<div class="flex-grow flex flex-col justify-between h-full py-1">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-semibold text-title-md text-on-surface">Linear Studio Pants</h3>
+<button class="text-on-surface-variant hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<p class="text-on-surface-variant text-label-sm mt-0.5">Size: 32 • Color: Midnight</p>
+</div>
+<div class="flex justify-between items-end mt-4">
+<span class="font-bold text-primary text-lg">$120.00</span>
+<div class="flex items-center bg-surface-container-highest rounded-full px-2 py-1 gap-3">
+<button class="w-6 h-6 flex items-center justify-center rounded-full bg-surface-container-lowest hover:bg-white active:scale-90 transition-all">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="font-semibold text-sm w-4 text-center">1</span>
+<button class="w-6 h-6 flex items-center justify-center rounded-full bg-primary text-on-primary hover:bg-primary-container active:scale-90 transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Order Summary Section -->
+<section class="bg-surface-container-low rounded-2xl p-6 space-y-4">
+<h2 class="font-headline font-bold text-lg text-on-surface px-1">Order Summary</h2>
+<div class="space-y-3 px-1">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-medium">Subtotal</span>
+<span class="font-semibold text-on-surface">$168.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-medium">Shipping</span>
+<span class="text-primary font-bold">FREE</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-medium">Estimated Taxes</span>
+<span class="font-semibold text-on-surface">$14.20</span>
+</div>
+</div>
+<div class="h-px bg-outline-variant/30 w-full my-2"></div>
+<div class="flex justify-between items-center px-1 pt-1">
+<span class="font-bold text-xl text-on-surface">Total</span>
+<span class="font-extrabold text-2xl text-primary">$182.20</span>
+</div>
+</section>
+<!-- Promotional Area (Editorial Style) -->
+<section class="relative h-32 rounded-2xl overflow-hidden bg-primary p-6 flex items-center justify-between">
+<div class="z-10 relative">
+<p class="text-on-primary-container text-xs font-bold uppercase tracking-widest opacity-80">Flash Deal</p>
+<h3 class="text-white font-headline text-xl font-bold mt-1">Get 20% off on your<br/>next purchase</h3>
+</div>
+<div class="absolute -right-4 -bottom-4 w-32 h-32 bg-secondary-container rounded-full opacity-20 blur-2xl"></div>
+<div class="absolute top-0 right-10 w-24 h-24 bg-white opacity-10 rounded-full blur-xl"></div>
+<span class="material-symbols-outlined text-white/20 text-7xl transform rotate-12 z-0">redeem</span>
+</section>
+</main>
+<!-- Checkout Action Area -->
+<div class="fixed bottom-20 left-0 w-full px-4 pb-4 z-40 bg-gradient-to-t from-surface via-surface/80 to-transparent pt-8">
+<button class="w-full bg-primary text-on-primary py-4 px-6 rounded-full font-bold flex items-center justify-center gap-2 shadow-lg active:scale-[0.98] transition-all hover:bg-primary-container">
+<span>Checkout Now</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-white/90 dark:bg-slate-950/90 backdrop-blur-lg shadow-[0_-4px_12px_rgba(0,0,0,0.05)] rounded-t-2xl border-t border-slate-100 dark:border-slate-800">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-blue-500 transition-all" href="javascript:void(0);">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-blue-500 transition-all" href="javascript:void(0);">
+<span class="material-symbols-outlined">search</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider mt-1">Search</span>
+</a>
+<!-- Active Tab: Cart -->
+<a class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl px-3 py-1.5 transition-all" href="javascript:void(0);">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+<span class="font-['Inter'] text-[11px] font-bold uppercase tracking-wider mt-1">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-blue-500 transition-all" href="javascript:void(0);">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

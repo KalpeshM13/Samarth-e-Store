@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samarth e-Store</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.innerWidth < 768) {
+                window.location.replace("src/screens/mobile_landing.html");
+            } else {
+                window.location.replace("src/screens/desktop_landing.html");
+            }
+        });
+    </script>
+</head>
+<body style="font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #f9fafb;">
+    <p>Loading Samarth e-Store...</p>
+</body>
+</html>

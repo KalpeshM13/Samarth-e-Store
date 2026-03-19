@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="desktop_cart.js"></script>
+    <link rel="stylesheet" href="desktop_cart.css" />
+    <script src="../cart.js"></script>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-[#f8fafb]/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-full mx-auto tonal-layering"
+    >
+      <div
+        class="text-2xl font-bold tracking-tighter text-[#003331] dark:text-emerald-500 font-['Manrope']"
+      >
+        Samarth e-Store
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a
+          class="text-slate-600 dark:text-slate-400 hover:text-[#003331] font-['Manrope'] tracking-tight transition-colors"
+          href="javascript:void(0);"
+          >Shop</a
+        >
+        <a
+          class="text-slate-600 dark:text-slate-400 hover:text-[#003331] font-['Manrope'] tracking-tight transition-colors"
+          href="javascript:void(0);"
+          >Collections</a
+        >
+        <a
+          class="text-slate-600 dark:text-slate-400 hover:text-[#003331] font-['Manrope'] tracking-tight transition-colors"
+          href="javascript:void(0);"
+          >About</a
+        >
+      </div>
+      <div class="flex items-center gap-4">
+        <button
+          class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors rounded-full active:opacity-80 active:scale-95"
+        >
+          <span class="material-symbols-outlined text-[#003331]"
+            >shopping_bag</span
+          >
+        </button>
+        <button
+          class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors rounded-full active:opacity-80 active:scale-95"
+        >
+          <span class="material-symbols-outlined text-[#003331]">person</span>
+        </button>
+      </div>
+    </nav>
+    <!-- Main Content -->
+    <main
+      class="flex-grow pt-32 pb-24 px-8 md:px-12 lg:px-24 max-w-7xl mx-auto w-full"
+    >
+      <h1
+        class="text-4xl md:text-5xl font-extrabold tracking-tighter text-primary mb-12"
+      >
+        Your Cart
+      </h1>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <!-- Cart Items List -->
+        <div class="lg:col-span-8 space-y-8">
+          <!-- Product Item 1 -->
+          <div
+            class="bg-surface-container-low p-6 rounded-xl flex flex-col md:flex-row gap-6 group transition-all"
+          >
+            <div
+              class="w-full md:w-48 h-64 md:h-48 overflow-hidden rounded-xl bg-surface-container-high"
+            >
+              <img
+                alt="Premium Minimalist Watch"
+                class="w-full h-full object-cover"
+                data-alt="Modern minimalist watch on white background"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwo3j_vKyarhMpm4KRJHAxMBDkFH_eo2ssSD6cUDtA3hvogJ0hKJ-ogpWNUN2D1tmgfwgc0PqXp-u_csFY-gP7rcbl_B6mSddFGn-os8jBNMBHmmOv6AbjsNUk8WIGzash3M0QE4rDPXBcdLDfiftNN-NbdV9D3ejc8di35RIlMegwA0UfTi1E092dRqJBvYrU41WcH83CZTIw5s3r-bSvZCd6LRU-n-u57o8_0y0fpifmm3xgPNCJyD4VjBRa8uEUegvsaeC6S3U"
+              />
+            </div>
+            <div class="flex flex-col flex-grow justify-between">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-xl font-bold text-on-surface mb-1">
+                    Horizon Chronograph
+                  </h3>
+                  <p
+                    class="text-on-surface-variant font-label text-sm uppercase tracking-widest"
+                  >
+                    Matte Silver / Leather
+                  </p>
+                </div>
+                <p class="text-lg font-bold text-primary">$340.00</p>
+              </div>
+              <div class="flex justify-between items-end mt-6">
+                <div
+                  class="flex items-center bg-surface-container-high rounded-lg p-1"
+                >
+                  <button
+                    class="w-8 h-8 flex items-center justify-center hover:bg-surface-container-highest rounded transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-sm"
+                      >remove</span
+                    >
+                  </button>
+                  <span class="px-4 font-label font-medium">01</span>
+                  <button
+                    class="w-8 h-8 flex items-center justify-center hover:bg-surface-container-highest rounded transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-sm">add</span>
+                  </button>
+                </div>
+                <button
+                  class="text-error flex items-center gap-1 font-label text-sm opacity-60 hover:opacity-100 transition-opacity"
+                >
+                  <span class="material-symbols-outlined text-sm">delete</span>
+                  Remove
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Product Item 2 -->
+          <div
+            class="bg-surface-container-low p-6 rounded-xl flex flex-col md:flex-row gap-6 group transition-all"
+          >
+            <div
+              class="w-full md:w-48 h-64 md:h-48 overflow-hidden rounded-xl bg-surface-container-high"
+            >
+              <img
+                alt="Architectural Ceramic Vase"
+                class="w-full h-full object-cover"
+                data-alt="Sleek white ceramic vase architectural design"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwJXohSr6VTpnfGYSLuYqPzG7RIv53r5LVO-DV3Oq6s-x3xS5Fidbw_eSjzEJq7nNiy673_vaeET72ItAYUlRujevSkJWLvF5R2J5VYJzR_hZH1nbBEFFZBa6-YZSvJhMFOCQQueQhveFiHrpHXLPUvzoVt3LJ27v79c_4V0ZjGdFWcXWJ1DGkbUxiOZLAj-WCHiaUAYYO-wDbam9rOzHVChBZUXmApe_0FLfxy9UdaVmANGrfb7j_qRl8pJXjRw25AwP2j8MmMbE"
+              />
+            </div>
+            <div class="flex flex-col flex-grow justify-between">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-xl font-bold text-on-surface mb-1">
+                    Sculptural Form No. 4
+                  </h3>
+                  <p
+                    class="text-on-surface-variant font-label text-sm uppercase tracking-widest"
+                  >
+                    Handcrafted Porcelain
+                  </p>
+                </div>
+                <p class="text-lg font-bold text-primary">$185.00</p>
+              </div>
+              <div class="flex justify-between items-end mt-6">
+                <div
+                  class="flex items-center bg-surface-container-high rounded-lg p-1"
+                >
+                  <button
+                    class="w-8 h-8 flex items-center justify-center hover:bg-surface-container-highest rounded transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-sm"
+                      >remove</span
+                    >
+                  </button>
+                  <span class="px-4 font-label font-medium">01</span>
+                  <button
+                    class="w-8 h-8 flex items-center justify-center hover:bg-surface-container-highest rounded transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-sm">add</span>
+                  </button>
+                </div>
+                <button
+                  class="text-error flex items-center gap-1 font-label text-sm opacity-60 hover:opacity-100 transition-opacity"
+                >
+                  <span class="material-symbols-outlined text-sm">delete</span>
+                  Remove
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Summary Sidebar -->
+        <aside class="lg:col-span-4 sticky top-32">
+          <div
+            class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_12px_40px_rgba(25,28,29,0.06)]"
+          >
+            <h2 class="text-2xl font-bold text-primary mb-8">Summary</h2>
+            <div class="space-y-4 mb-8">
+              <div
+                class="flex justify-between text-on-surface-variant font-label"
+              >
+                <span class="">Subtotal</span>
+                <span class="text-on-surface font-medium">$525.00</span>
+              </div>
+              <div
+                class="flex justify-between text-on-surface-variant font-label"
+              >
+                <span class="">Estimated Shipping</span>
+                <span class="text-on-surface font-medium">$12.00</span>
+              </div>
+              <div
+                class="flex justify-between text-on-surface-variant font-label"
+              >
+                <span class="">Tax</span>
+                <span class="text-on-surface font-medium">$42.00</span>
+              </div>
+            </div>
+            <div
+              class="pt-6 mb-8 border-t-2 border-surface-container-low flex justify-between items-center"
+            >
+              <span class="text-lg font-bold text-primary">Total</span>
+              <span class="text-2xl font-extrabold text-primary">$579.00</span>
+            </div>
+            <div class="space-y-4">
+              <button
+                class="w-full bg-primary text-on-primary py-4 rounded-md font-bold tracking-tight hover:bg-primary-container transition-all active:scale-[0.98]"
+              >
+                Checkout
+              </button>
+              <p
+                class="text-center text-xs text-on-surface-variant font-label px-4"
+              >
+                Shipping and taxes calculated at next step. Secure encrypted
+                checkout.
+              </p>
+            </div>
+            <!-- Promo Code -->
+            <div class="mt-12">
+              <label
+                class="block font-label text-xs uppercase tracking-widest text-on-surface-variant mb-3"
+                >Promo Code</label
+              >
+              <div class="flex gap-2">
+                <input
+                  class="flex-grow bg-surface-container-high border-none rounded-md px-4 py-2 font-label focus:ring-2 focus:ring-primary/20"
+                  placeholder="Enter code"
+                  type="text"
+                />
+                <button
+                  class="text-primary font-bold text-sm px-4 hover:underline"
+                >
+                  Apply
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 flex items-center gap-4 text-on-surface-variant">
+            <span class="material-symbols-outlined text-primary"
+              >verified_user</span
+            >
+            <span class="text-sm font-label"
+              >2-Year Warranty on all Atelier pieces.</span
+            >
+          </div>
+        </aside>
+      </div>
+      <!-- Recommendations Section (Asymmetric Editorial Style) -->
+      <section class="mt-32">
+        <h2 class="text-3xl font-bold text-primary mb-12">
+          Complements Your Selection
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="space-y-4 group">
+            <div
+              class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container"
+            >
+              <img
+                alt="Luxury Fragrance"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                data-alt="Elegant glass perfume bottle with minimal label"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMkFr3BJpggYcNEGiEbCyS1bHsolUaWR42eHeZJ6PWCtrdPYplWMgH-4eRri5fNCr1s2FHP0uDu5x8S2k0tdjJDdK4Wqz9UeaNa3vxnr53ROpPtZw07vp98T_C9SN34aAilgTYCwHU-SYW9hMVl-xcd9vmHXl0qVm0-7jOhKIx2lci93MbPAPpKAa6WLlDJ74bb8TqmtDwLDvqGkILyUdffb3QYFUWNuznPlQqClwzc0RKt6eGkFdyhAbb0svk-BSpmlfyGC6H7CU"
+              />
+            </div>
+            <div>
+              <h4 class="font-bold text-on-surface">Nocturne Eau de Parfum</h4>
+              <p class="text-primary font-bold">$120.00</p>
+            </div>
+          </div>
+          <div class="space-y-4 group pt-12 md:pt-24">
+            <div
+              class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container"
+            >
+              <img
+                alt="Designer Candle"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                data-alt="Dark aesthetic candle jar with metallic lid"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXaM6SIqzGuX-oXejvCYV8KUo5OZdIfvOtotMOF9HMpFuMjzlHhGR-WptPDU6eXRg8SQUdds55-4EK-3_f_SHZ5FhOymKph2PMLlfcR3p8hrrqyw0CNjJMV98h-u1lDvxVyzoesficbzixf7TajDouvrt4eEkuM0EFzpLCGAxP9gXWdAzXlgY5--hRnSMH_6dOlo1KWUF_PpUFgPkKMgCOGtjeX1gpC8XN2sTJu25YZZmTnG4_U6x2nxFPSLeYWxsHEvOAijhpFfQ"
+              />
+            </div>
+            <div>
+              <h4 class="font-bold text-on-surface">Obsidian Scented Candle</h4>
+              <p class="text-primary font-bold">$65.00</p>
+            </div>
+          </div>
+          <div class="space-y-4 group">
+            <div
+              class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container"
+            >
+              <img
+                alt="Premium Leather Shoes"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                data-alt="High end leather oxfords on neutral background"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7PHgb_FmDHWmXYDEelKt4PCtqeoOg76jduLfJVTrWATy8iu-NJ4Xts_cZzTISUpxdEL6mqIKGojYgGH71ZanSaeYZzyZQ9z63oN-s6bk9TZvmJBwkEeHIQfXaDxeb86csqxmE6zNZCC-9oVFmuwtNSUeynSGH19_FNzOD5C3fwXStMx8jdXzIkwC92YYz4NizgL66vsjGWQIPucwHdu7CW7YXXWCqDdpiB7bOu2pNiyvSIS58tMY0h1EMOymwjt_JW6_4c2QPqD4"
+              />
+            </div>
+            <div>
+              <h4 class="font-bold text-on-surface">Urban Walkers No. 2</h4>
+              <p class="text-primary font-bold">$480.00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-[#d8dadb] dark:bg-slate-900 flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full mt-auto"
+    >
+      <div class="mb-8 md:mb-0">
+        <div class="text-lg font-bold text-[#003331] font-['Manrope'] mb-2">
+          Samarth e-Store
+        </div>
+        <p
+          class="text-slate-500 dark:text-slate-400 text-sm font-['Manrope'] tracking-wide"
+        >
+          © 2026&nbsp;Samarth e-Store. All rights reserved.
+        </p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-8">
+        <a
+          class="text-slate-500 dark:text-slate-400 font-['Manrope'] text-sm tracking-wide hover:text-[#003331] dark:hover:text-emerald-400 transition-colors"
+          href="javascript:void(0);"
+          >Privacy Policy</a
+        >
+        <a
+          class="text-slate-500 dark:text-slate-400 font-['Manrope'] text-sm tracking-wide hover:text-[#003331] dark:hover:text-emerald-400 transition-colors"
+          href="javascript:void(0);"
+          >Terms of Service</a
+        >
+        <a
+          class="text-slate-500 dark:text-slate-400 font-['Manrope'] text-sm tracking-wide hover:text-[#003331] dark:hover:text-emerald-400 transition-colors"
+          href="javascript:void(0);"
+          >Shipping</a
+        >
+        <a
+          class="text-slate-500 dark:text-slate-400 font-['Manrope'] text-sm tracking-wide hover:text-[#003331] dark:hover:text-emerald-400 transition-colors"
+          href="javascript:void(0);"
+          >Returns</a
+        >
+      </div>
+    </footer>
+    <!-- Mobile Navigation (Hidden on Web) -->
+    <div
+      class="md:hidden fixed bottom-0 left-0 right-0 bg-[#ffffff]/85 backdrop-blur-xl px-8 py-4 flex justify-between items-center z-50"
+    >
+      <button class="flex flex-col items-center gap-1 text-slate-400">
+        <span class="material-symbols-outlined">home</span>
+        <span class="text-[10px] font-label">Home</span>
+      </button>
+      <button class="flex flex-col items-center gap-1 text-slate-400">
+        <span class="material-symbols-outlined">grid_view</span>
+        <span class="text-[10px] font-label">Shop</span>
+      </button>
+      <button class="flex flex-col items-center gap-1 text-primary">
+        <span
+          class="material-symbols-outlined"
+          style="font-variation-settings: &quot;FILL&quot; 1"
+          >shopping_bag</span
+        >
+        <span class="text-[10px] font-label font-bold">Cart</span>
+      </button>
+      <button class="flex flex-col items-center gap-1 text-slate-400">
+        <span class="material-symbols-outlined">person</span>
+        <span class="text-[10px] font-label">Profile</span>
+      </button>
+    </div>
+  </body>
+</html>

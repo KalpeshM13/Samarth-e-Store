@@ -1,0 +1,162 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Samarth e-Store</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="mobile_store.js"></script>
+<link rel="stylesheet" href="mobile_store.css">
+
+    <script src="../cart.js"></script>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm shadow-slate-200/50 dark:shadow-none">
+<div class="flex justify-between items-center px-4 py-3 w-full relative">
+<div class="flex items-center gap-4">
+<button class="text-blue-700 dark:text-blue-400 active:scale-95 transition-transform duration-200" >
+<span class="material-symbols-outlined" data-icon="menu" >menu</span>
+</button>
+<span class="text-xl font-black text-slate-900 dark:text-slate-100 tracking-tighter font-['Inter']" >Samarth e-Store</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-500 dark:text-slate-400 active:scale-95 transition-transform duration-200" >
+<span class="material-symbols-outlined" data-icon="search" >search</span>
+</button>
+<button class="text-blue-700 dark:text-blue-400 active:scale-95 transition-transform duration-200 relative" >
+<span class="material-symbols-outlined" data-icon="shopping_cart" >shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold px-1.5 rounded-full" >2</span>
+</button>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 h-[1px] w-full absolute bottom-0 left-0"></div>
+</div>
+</header>
+<main class="pt-20 pb-24">
+<!-- Hero Section -->
+<section class="px-6 mb-8">
+<div class="flex flex-col gap-1">
+<span class="text-primary font-semibold tracking-widest text-[10px] uppercase" >Summer 2026</span>
+<h1 class="text-4xl font-extrabold tracking-tight text-on-surface font-headline leading-tight" >Refined Essentials</h1>
+<p class="text-on-surface-variant text-sm mt-2 max-w-[280px]" >Curated basics designed for longevity and timeless style.</p>
+</div>
+</section>
+<!-- Filter & Sort Bar -->
+<section class="px-4 mb-6">
+<div class="flex items-center justify-between bg-surface-container-low rounded-xl p-2">
+<button class="flex-1 flex items-center justify-center gap-2 py-2.5 text-sm font-semibold text-on-surface hover:bg-surface-container transition-colors rounded-lg" >
+<span class="material-symbols-outlined text-sm" data-icon="tune" >tune</span>
+                    Filter
+                </button>
+<div class="w-px h-6 bg-outline-variant/20"></div>
+<button class="flex-1 flex items-center justify-center gap-2 py-2.5 text-sm font-semibold text-on-surface hover:bg-surface-container transition-colors rounded-lg" >
+<span class="material-symbols-outlined text-sm" data-icon="swap_vert" >swap_vert</span>
+                    Sort
+                </button>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="px-4">
+<div class="grid grid-cols-2 gap-4">
+<!-- Product Card 1 -->
+<div class="flex flex-col gap-3 group">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-highest">
+<img alt="Premium White T-Shirt" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Minimalist high quality white cotton tshirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-fhmqOmSmYTD0Ucok9StST_E5QUP7KuTaxEFU2jgv-bqPcaolrYFHE4A5CwWltizOUYl2kJ9xD9iza-fPSSzWL4c1rP9rn7mdN_oyrHMkuQG_sqFBjlEyEJLy0m2cKp3gySD-0mswt5Onq-bjQ2dxhYkftYnlbLjR_cTQmpChLiveG5jwCqd3GuQBReSkt517g4dq1JlAdm0L_CYZ4lDuGoWuTnSD3ZeRuLU8GD2f3GumP-OJFC2zrOYzxYsPZnPQj77hKCEES98" >
+<button class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 shadow-sm backdrop-blur-sm" >
+<span class="material-symbols-outlined text-lg text-on-surface-variant" data-icon="favorite" >favorite</span>
+</button>
+</div>
+<div class="flex flex-col px-1">
+<h3 class="text-sm font-semibold text-on-surface leading-snug" >Architect Tee</h3>
+<p class="text-xs text-on-surface-variant mt-0.5" >Optic White</p>
+<p class="text-sm font-bold text-primary mt-2" >$55.00</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="flex flex-col gap-3 group">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-highest">
+<img alt="Linen Overshirt" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Modern blue linen overshirt jacket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATKNg9iKQGOTBz5IyiS9mMDKy-Y9g81EyuxGYT8s5upHOt9RlTfM2HTyEEHl1peBCr7KagQabRuR8CCCLX7vjpfj7xO1lnP7ExilcKvpXjwc22uIGp4gYRVmTeuKfgNYU2YX7mK-1b54Z77FGFE9V4FDwMZUo3zDXaL9dMPb5Vc277_slz6bkShyOsIzJlWuDSQBBcLw4Uhvnoza_ztg6EBWVqKuqMxE2Ed_LFLwRZW1nZ0X72iTUqaDQBGThV5zK-Sihe6sCgztg" >
+<div class="absolute bottom-3 left-3 px-2 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded uppercase tracking-wider" >New</div>
+<button class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 shadow-sm backdrop-blur-sm" >
+<span class="material-symbols-outlined text-lg text-on-surface-variant" data-icon="favorite" >favorite</span>
+</button>
+</div>
+<div class="flex flex-col px-1">
+<h3 class="text-sm font-semibold text-on-surface leading-snug" >Linen Utility Shirt</h3>
+<p class="text-xs text-on-surface-variant mt-0.5" >Navy Dusk</p>
+<p class="text-sm font-bold text-primary mt-2" >$128.00</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="flex flex-col gap-3 group">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-highest">
+<img alt="Canvas Sneakers" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Classic red minimal canvas sneakers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_A_WMcwP9bHLmSlTYe6tR143RcumGTbvncnmdY_lGH8zOF77gK_AUOC6gj6RnMLVFzjhMFr3zY_zsQWbnAKPyw7JTZkUR8U7zdDd0bncZXfbbqYgullmZ1r65IX4bmkt1l85RiIf0YljzSdlfSV8V3Wq5BGt11ZQBcpSnK1uE4r2EUtTO1O4eJrdAFoE5on9Qx14PLlousdJgG81lCrJ7N4Y2aVcUW-wcK5g6DOFr7XqdYqHk8vjJwSW-XMus-aO2k26AtdsDsAU" >
+<button class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 shadow-sm backdrop-blur-sm" >
+<span class="material-symbols-outlined text-lg text-on-surface-variant" data-icon="favorite" >favorite</span>
+</button>
+</div>
+<div class="flex flex-col px-1">
+<h3 class="text-sm font-semibold text-on-surface leading-snug" >Heritage Low-Top</h3>
+<p class="text-xs text-on-surface-variant mt-0.5" >Heritage Red</p>
+<p class="text-sm font-bold text-primary mt-2" >$85.00</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="flex flex-col gap-3 group">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-highest">
+<img alt="Leather Jacket" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Black premium leather motorcycle jacket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfyOLTIOnujdGvhDi1IVgRTIcBayV65djiWcBo7jfgZOmmNRCZBf_mtGZTENBFLvfIc8Ve1oNoS-9282shqrTuHEwkuav895sJxd70fd8AO3AL33gNAAG9k-7fqxJypS9pw2cUZK1-fnfEQC1l24AcgDDYUCTprV5jqmGScoBm5XCn-hDdrzi8VL5XcFBWlPJ_ZS80x-TFYPoY0elpjhJfR9EhCMShnj2lyP-t74Ib-t0CW65fGgF1M4mBGL4iAlwIBMptW4u8pNA" >
+<button class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 shadow-sm backdrop-blur-sm" >
+<span class="material-symbols-outlined text-lg text-on-surface-variant" data-icon="favorite" >favorite</span>
+</button>
+</div>
+<div class="flex flex-col px-1">
+<h3 class="text-sm font-semibold text-on-surface leading-snug" >Racer Leather</h3>
+<p class="text-xs text-on-surface-variant mt-0.5" >Midnight Black</p>
+<p class="text-sm font-bold text-primary mt-2" >$420.00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Tonal Shift Section -->
+<section class="mt-16 bg-surface-container-low py-12 px-6">
+<div class="flex flex-col gap-4 text-center">
+<h2 class="text-2xl font-bold tracking-tight text-on-surface" >Stay Curated</h2>
+<p class="text-sm text-on-surface-variant" >Join our list for early access to drops and editorial stories.</p>
+<div class="mt-4 flex flex-col gap-2">
+<input class="w-full px-4 py-3 bg-surface-container-lowest border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/20" placeholder="Email Address" type="email">
+<button class="w-full py-3 bg-primary text-on-primary font-bold rounded-xl active:scale-[0.98] transition-all" >Subscribe Now</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-8 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 flex flex-col items-center gap-4 px-6 mb-16">
+<span class="text-sm font-bold text-slate-900 dark:text-slate-100 font-['Inter']" >Samarth e-Store</span>
+<div class="flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 font-['Inter'] text-[10px] uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="javascript:void(0);" >Privacy</a>
+<a class="text-slate-500 dark:text-slate-400 font-['Inter'] text-[10px] uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="javascript:void(0);" >Terms</a>
+<a class="text-slate-500 dark:text-slate-400 font-['Inter'] text-[10px] uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="javascript:void(0);" >Support</a>
+</div>
+<p class="text-slate-400 dark:text-slate-500 font-['Inter'] text-[10px] uppercase tracking-widest mt-2" >© 2026&nbsp;Samarth e-Store</p>
+</footer>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 flex items-center justify-around px-2 py-3 border-t border-slate-100 dark:border-slate-800 md:hidden">
+<button class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" >
+<span class="material-symbols-outlined" data-icon="home" >home</span>
+<span class="text-[10px] font-medium font-['Inter']" >Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-blue-700 dark:text-blue-400" >
+<span class="material-symbols-outlined" data-icon="storefront" style="font-variation-settings: &quot;FILL&quot; 1;">storefront</span>
+<span class="text-[10px] font-bold font-['Inter']" >Shop All</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" >
+<span class="material-symbols-outlined" data-icon="auto_awesome" >auto_awesome</span>
+<span class="text-[10px] font-medium font-['Inter']" >New</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" >
+<span class="material-symbols-outlined" data-icon="person" >person</span>
+<span class="text-[10px] font-medium font-['Inter']" >Account</span>
+</button>
+</nav>
+</body></html>
