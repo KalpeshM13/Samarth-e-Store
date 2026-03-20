@@ -1,189 +1,367 @@
-<!DOCTYPE html><html class="light" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Samarth e-Store</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script src="mobile_landing.js"></script>
-<link rel="stylesheet" href="mobile_landing.css">
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Samarth e-Store</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="mobile_landing.js"></script>
+    <link rel="stylesheet" href="mobile_landing.css" />
 
     <script src="../cart.js"></script>
-</head>
-<body class="bg-surface text-on-surface antialiased">
-<!-- TopAppBar -->
-<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm shadow-slate-200/50 dark:shadow-none">
-<div class="flex justify-between items-center px-4 py-3 w-full">
-<button class="text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors active:scale-95 transition-transform duration-200 p-2 rounded-full" >
-<span class="material-symbols-outlined" data-icon="menu" >menu</span>
-</button>
-<span class="text-xl font-black text-slate-900 dark:text-slate-100 tracking-tighter font-['Inter']" >Samarth e-Store</span>
-<div class="flex items-center gap-2">
-<button class="text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors active:scale-95 transition-transform duration-200 p-2 rounded-full" >
-<span class="material-symbols-outlined" data-icon="shopping_cart" >shopping_cart</span>
-</button>
-</div>
-</div>
-<div class="bg-slate-100 dark:bg-slate-800 h-[1px] w-full absolute bottom-0"></div>
-</header>
-<main class="pt-16">
-<!-- Hero Section -->
-<section class="relative px-4 pt-8 pb-12 overflow-hidden bg-surface-container-low">
-<div class="relative z-10 flex flex-col gap-6">
-<span class="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold uppercase tracking-widest rounded-sm w-fit" >Summer '26 Collection</span>
-<h1 class="text-4xl font-extrabold tracking-tighter leading-[1.1] text-on-surface" >Structured Elegance for the Digital Era.</h1>
-<p class="text-on-surface-variant leading-relaxed max-w-[85%]" >Discover a curated selection of avant-garde essentials designed for the modern architectural lifestyle.</p>
-<div class="flex gap-3">
-<button class="bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold flex items-center gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-all" >
-                        Shop Now
-                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward" >arrow_forward</span>
-</button>
-<button class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-lg font-semibold active:scale-95 transition-all" >
-                        Lookbook
-                    </button>
-</div>
-</div>
-<div class="mt-10 relative">
-<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
-<img alt="Featured Fashion Model" class="w-full h-full object-cover" data-alt="Modern fashion model in avant-garde minimalist clothing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB90eHJ5g9cbwQ0GTtKfuMYnKKDMhI1u96jgxuDO2SBzoVBuZHN1xFKe1EWSNho0lpudaICe2ifYgIfh7LRYaQuAfYl6FLQOfNrVO7Ocq4-SpLWG1EEAycpLK875cRIfmy8FzL6PJ_YAuy9oQlL9ix58BHnyx_TqQ5k2MjEdpF8ddErBvwPrHhe0YZbRmtqzOSkjt1k2OmwkA9fSNfKIz-60N8eg_FZcrdaLtBYrI41O5XIHssdIiEOGtP0fAlsdTEwm8ihbRKluSs" >
-</div>
-<!-- Floating Glass Detail Card -->
-<div class="absolute -bottom-4 -right-2 glass-header bg-white/60 p-4 rounded-xl shadow-xl border border-white/40 max-w-[180px]">
-<p class="text-[10px] uppercase font-bold text-primary mb-1" >New Drop</p>
-<p class="text-sm font-bold leading-tight" >Asymmetric Cotton Tunic</p>
-<p class="text-lg font-black mt-1" >$124.00</p>
-</div>
-</div>
-</section>
-<!-- Category Bento Grid (Featured Collections) -->
-<section class="px-4 py-12">
-<div class="flex items-end justify-between mb-8">
-<div>
-<h2 class="text-2xl font-black tracking-tight" >Featured Collections</h2>
-<div class="h-1 w-12 bg-primary mt-1"></div>
-</div>
-<button class="text-primary font-semibold text-sm flex items-center gap-1" >
-                    View All <span class="material-symbols-outlined text-sm" data-icon="chevron_right" >chevron_right</span>
-</button>
-</div>
-<div class="grid grid-cols-2 grid-rows-4 gap-3 h-[600px]">
-<!-- Bento Item 1 -->
-<div class="col-span-2 row-span-2 relative rounded-xl overflow-hidden bg-surface-container-highest group">
-<img alt="Outerwear" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="High-end minimal outerwear on a white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfS-EKBJfOOU7BFRaWKrE52aPYKXQLKseuUTV658qwUfLwY7jKE-SHGuZ2FONf_hrz_4ezqAx6WZGeDQfkaMGmiqnDW8vcBBrPB1XwJe8IYwq9HM8_z6m2TpKiGQ106bpS2MLh_ITpeITkguInYnUbNtOk_FkvStto31OrpAwHMddNgUiWvdQ9U_8huPZS5hw8WSWXI8iXBcAv7-mAN3U5Ky64hH2fSuehMGdicPkWjamjzxS_2Mfls2OhOKg7CrwDUjwcOp2BiBA" >
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-5">
-<h3 class="text-white text-xl font-bold" >Essential Outerwear</h3>
-<p class="text-white/80 text-xs" >Shop the Archive</p>
-</div>
-</div>
-<!-- Bento Item 2 -->
-<div class="col-span-1 row-span-2 relative rounded-xl overflow-hidden bg-surface-container-high group">
-<img alt="Footwear" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Conceptual sneaker design in monochromatic white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkD8ZJ-LDyRVVjdih0XRyDvYRWHb7N7KLJWWMyLVgXdKFlWF6GXle0KnxG64c4vpGfxa9ZT_LgGZOwaiOlJDKrcWW6Zj32KnwcgVYzMkTzVKclQ1VKlTt3FcI25UKxJniyYFf-BE6FtMO2dwUY7OLKH-lc4yUB3MITxFzcpiaCiPLli-VLo9usiktjJuNu5qFqVphHR8jBmnL-6dO-VXE4BK8I-LFA3_EWPjxQA2d_sSb2aihUsgivK1QElc3MfcT2IpFiUAR2xQ8" >
-<div class="absolute inset-0 bg-black/10 flex items-start p-4">
-<span class="bg-white px-2 py-1 text-[9px] font-black uppercase tracking-tighter" >Footwear</span>
-</div>
-</div>
-<!-- Bento Item 3 -->
-<div class="col-span-1 row-span-1 relative rounded-xl overflow-hidden bg-surface-container group">
-<img alt="Accessories" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Abstract view of silver designer accessories" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABMXCTO2dJliHw_nj-Iqkori7JoSMb0fJIpHI2vFweh174xT8E-PSGAYtuvMBtu7ZtudWkChLg1E227f_JyhMMjCaxkhD3bDvJ6A7LYhk9lAQWDM9v_JGIuiMfWFsbXi7cb1ASZnqpF2PrqaeIdE_fn2jl_Fjyeaa6RcUNIeISQLecKKdpxPYeHMy1m3EynSq0q7aEF7Nm6LDpL5B3kk226dLMrjlMJjg-0DPxMY7SmJGiliVOqkr285Im6XBrbi26H50jMJPiRh8" >
-<div class="absolute inset-0 flex items-center justify-center">
-<span class="bg-black text-white px-3 py-1 text-[10px] font-bold uppercase" >Silver</span>
-</div>
-</div>
-<!-- Bento Item 4 -->
-<div class="col-span-1 row-span-1 relative rounded-xl overflow-hidden bg-primary-container group">
-<div class="p-4 h-full flex flex-col justify-between">
-<p class="text-white text-lg font-bold leading-tight" >Limited Editions</p>
-<span class="material-symbols-outlined text-white self-end" data-icon="trending_up" >trending_up</span>
-</div>
-</div>
-</div>
-</section>
-<!-- New Arrivals Section -->
-<section class="bg-surface-container-low py-12 px-4">
-<div class="mb-8">
-<h2 class="text-2xl font-black tracking-tight" >New Arrivals</h2>
-<p class="text-on-surface-variant text-sm mt-1" >Freshly curated pieces added today.</p>
-</div>
-<!-- Horizontal Scroll Cards -->
-<div class="flex overflow-x-auto gap-4 pb-4 no-scrollbar -mx-4 px-4 snap-x">
-<!-- Product Card 1 -->
-<div class="min-w-[260px] snap-start flex flex-col gap-3">
-<div class="aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-lowest relative group">
-<img alt="Silk Shirt" class="w-full h-full object-cover" data-alt="Minimalist beige silk shirt on a hanger" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0gQL4cjNkIXQCuuypd2QIs_v_B4dcIT2Zo8XARO6bnAr6k0WHQmvMLzOvPW1ppdHabVHjlImlmiU_o5HYfHT4mbvcPgehvHAEwtZLHoipGy9dVFPFW3tUApNoiQsha3o9n8OiXjCw_BvJ2RkVWc_BKo7mvLH1nc7jpMIOgvX8A5t9HDu1TSAYBengQHjnMD9h_NpohwS8AVpATPLORfb8_SlbsAzZTnyRPr31NdkLX46EsyaB8QCwjxgZW-LXF3lDYRRZP6jMZ9U" >
-<button class="absolute bottom-3 right-3 bg-white p-2 rounded-full shadow-lg hover:scale-110 transition-transform" >
-<span class="material-symbols-outlined text-primary text-sm" data-icon="add_shopping_cart" >add_shopping_cart</span>
-</button>
-</div>
-<div>
-<p class="text-xs font-medium text-primary uppercase tracking-widest" >Minimal</p>
-<h4 class="text-base font-bold text-on-surface" >Fluid Silk Shirt</h4>
-<div class="flex items-center gap-2 mt-1">
-<span class="text-lg font-black" >$189.00</span>
-<span class="text-xs text-on-surface-variant line-through" >$245.00</span>
-</div>
-</div>
-</div>
-<!-- Product Card 2 -->
-<div class="min-w-[260px] snap-start flex flex-col gap-3">
-<div class="aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-lowest relative">
-<img alt="Trench Coat" class="w-full h-full object-cover" data-alt="Khaki structured trench coat flat lay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH63uKO2Yro9ecz6LgCEa28DYi9wqYMFTFcJqVFEiJQvqo3h6KwVW8bBpjePJUxU-bH98i_P37L9HJTC9wekjvxXHQefxVR6GipY4yQ8P2RnJYOTb-t7qMBEv0xjwB20isQuIJMEtE54Pk6sar0aduAIlHoy7DjnPIYg4TnY-BnTFzz7KgyRZPAOD9DpJUvjUI3BBcWLEAzM1vSKdHICuHspBny3xBrwBAFLitZUG9AVI-T-VuzyOwYKBNsxUGA9rPrf-XM0vDyiY" >
-<span class="absolute top-3 left-3 bg-secondary-container text-on-secondary-container px-2 py-1 text-[9px] font-bold uppercase rounded-sm" >Essential</span>
-</div>
-<div>
-<p class="text-xs font-medium text-primary uppercase tracking-widest" >Tailored</p>
-<h4 class="text-base font-bold text-on-surface" >Modular Trench Coat</h4>
-<div class="flex items-center gap-2 mt-1">
-<span class="text-lg font-black" >$350.00</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Promotional Banner -->
-<section class="px-4 py-8">
-<div class="bg-primary-container rounded-2xl p-8 relative overflow-hidden">
-<div class="relative z-10">
-<h3 class="text-white text-3xl font-black leading-tight mb-2" >Join the <br>Curator Club.</h3>
-<p class="text-white/80 text-sm mb-6 max-w-[200px]" >Unlock early access to drops and exclusive member pricing.</p>
-<button class="bg-white text-primary px-5 py-2 rounded-lg text-sm font-bold shadow-xl active:scale-95 transition-all" >Sign Up Free</button>
-</div>
-<span class="material-symbols-outlined absolute -bottom-8 -right-8 text-[180px] text-white/10 rotate-12" data-icon="auto_awesome" style="font-variation-settings: &quot;FILL&quot; 1;">auto_awesome</span>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full py-8 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 flex flex-col items-center gap-4 px-6 w-full opacity-80 hover:opacity-100 transition-opacity">
-<span class="text-sm font-bold text-slate-900 dark:text-slate-100 tracking-tighter" >Samarth e-Store</span>
-<div class="flex gap-6">
-<a class="font-['Inter'] text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="javascript:void(0);" >Privacy</a>
-<a class="font-['Inter'] text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="javascript:void(0);" >Terms</a>
-<a class="font-['Inter'] text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" href="javascript:void(0);" >Support</a>
-</div>
-<p class="font-['Inter'] text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 mt-4" >© 2026&nbsp;Samarth e-Store</p>
-</footer>
-<!-- BottomNavBar (Mobile Only) -->
-<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-xl border-t border-slate-100 z-50">
-<div class="flex justify-around items-center h-16">
-<!-- Home Active -->
-<a class="flex flex-col items-center justify-center gap-1 text-blue-700 dark:text-blue-400 transition-all duration-200" href="javascript:void(0);" >
-<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: &quot;FILL&quot; 1;">home</span>
-<span class="text-[10px] font-bold" >Home</span>
-</a>
-<a class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 transition-all duration-200" href="javascript:void(0);" >
-<span class="material-symbols-outlined" data-icon="storefront" >storefront</span>
-<span class="text-[10px] font-medium" >Shop</span>
-</a>
-<a class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 transition-all duration-200" href="javascript:void(0);" >
-<span class="material-symbols-outlined" data-icon="auto_awesome" >auto_awesome</span>
-<span class="text-[10px] font-medium" >New</span>
-</a>
-<a class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 transition-all duration-200" href="javascript:void(0);" >
-<span class="material-symbols-outlined" data-icon="person" >person</span>
-<span class="text-[10px] font-medium" >Account</span>
-</a>
-</div>
-</nav>
-<!-- Spacer for Bottom Nav -->
-<div class="h-16 md:hidden"></div>
-</body></html>
+  </head>
+  <body class="bg-surface text-on-surface antialiased">
+    <!-- TopAppBar -->
+    <header
+      class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm shadow-slate-200/50 dark:shadow-none"
+    >
+      <div class="flex justify-between items-center px-4 py-3 w-full">
+        <button
+          class="text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors active:scale-95 transition-transform duration-200 p-2 rounded-full"
+        >
+          <span class="material-symbols-outlined" data-icon="menu">menu</span>
+        </button>
+        <span
+          class="text-xl font-black text-slate-900 dark:text-slate-100 tracking-tighter font-['Inter']"
+          >Samarth e-Store</span
+        >
+        <div class="flex items-center gap-2">
+          <button
+            class="text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors active:scale-95 transition-transform duration-200 p-2 rounded-full"
+          >
+            <span class="material-symbols-outlined" data-icon="shopping_cart"
+              >shopping_cart</span
+            >
+          </button>
+        </div>
+      </div>
+      <div
+        class="bg-slate-100 dark:bg-slate-800 h-[1px] w-full absolute bottom-0"
+      ></div>
+    </header>
+    <main class="pt-16">
+      <!-- Hero Section -->
+      <section
+        class="relative px-4 pt-8 pb-12 overflow-hidden bg-surface-container-low"
+      >
+        <div class="relative z-10 flex flex-col gap-6">
+          <span
+            class="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold uppercase tracking-widest rounded-sm w-fit"
+            >Summer '26 Collection</span
+          >
+          <h1
+            class="text-4xl font-extrabold tracking-tighter leading-[1.1] text-on-surface"
+          >
+            Structured Elegance for the Digital Era.
+          </h1>
+          <p class="text-on-surface-variant leading-relaxed max-w-[85%]">
+            Discover a curated selection of avant-garde essentials designed for
+            the modern architectural lifestyle.
+          </p>
+          <div class="flex gap-3">
+            <button
+              class="bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold flex items-center gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-all"
+            >
+              <a href="mobile_store.html">Shop Now</a>
+              <span
+                class="material-symbols-outlined text-sm"
+                data-icon="arrow_forward"
+                >arrow_forward</span
+              >
+            </button>
+            <button
+              class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-lg font-semibold active:scale-95 transition-all"
+            >
+              Lookbook
+            </button>
+          </div>
+        </div>
+        <div class="mt-10 relative">
+          <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+            <img
+              alt="Featured Fashion Model"
+              class="w-full h-full object-cover"
+              data-alt="Modern fashion model in avant-garde minimalist clothing"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB90eHJ5g9cbwQ0GTtKfuMYnKKDMhI1u96jgxuDO2SBzoVBuZHN1xFKe1EWSNho0lpudaICe2ifYgIfh7LRYaQuAfYl6FLQOfNrVO7Ocq4-SpLWG1EEAycpLK875cRIfmy8FzL6PJ_YAuy9oQlL9ix58BHnyx_TqQ5k2MjEdpF8ddErBvwPrHhe0YZbRmtqzOSkjt1k2OmwkA9fSNfKIz-60N8eg_FZcrdaLtBYrI41O5XIHssdIiEOGtP0fAlsdTEwm8ihbRKluSs"
+            />
+          </div>
+          <!-- Floating Glass Detail Card -->
+          <div
+            class="absolute -bottom-4 -right-2 glass-header bg-white/60 p-4 rounded-xl shadow-xl border border-white/40 max-w-[180px]"
+          >
+            <p class="text-[10px] uppercase font-bold text-primary mb-1">
+              New Drop
+            </p>
+            <p class="text-sm font-bold leading-tight">
+              Asymmetric Cotton Tunic
+            </p>
+            <p class="text-lg font-black mt-1">$124.00</p>
+          </div>
+        </div>
+      </section>
+      <!-- Category Bento Grid (Featured Collections) -->
+      <section class="px-4 py-12">
+        <div class="flex items-end justify-between mb-8">
+          <div>
+            <h2 class="text-2xl font-black tracking-tight">
+              Featured Collections
+            </h2>
+            <div class="h-1 w-12 bg-primary mt-1"></div>
+          </div>
+          <button
+            class="text-primary font-semibold text-sm flex items-center gap-1"
+          >
+            View All
+            <span
+              class="material-symbols-outlined text-sm"
+              data-icon="chevron_right"
+              >chevron_right</span
+            >
+          </button>
+        </div>
+        <div class="grid grid-cols-2 grid-rows-4 gap-3 h-[600px]">
+          <!-- Bento Item 1 -->
+          <div
+            class="col-span-2 row-span-2 relative rounded-xl overflow-hidden bg-surface-container-highest group"
+          >
+            <img
+              alt="Outerwear"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              data-alt="High-end minimal outerwear on a white background"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfS-EKBJfOOU7BFRaWKrE52aPYKXQLKseuUTV658qwUfLwY7jKE-SHGuZ2FONf_hrz_4ezqAx6WZGeDQfkaMGmiqnDW8vcBBrPB1XwJe8IYwq9HM8_z6m2TpKiGQ106bpS2MLh_ITpeITkguInYnUbNtOk_FkvStto31OrpAwHMddNgUiWvdQ9U_8huPZS5hw8WSWXI8iXBcAv7-mAN3U5Ky64hH2fSuehMGdicPkWjamjzxS_2Mfls2OhOKg7CrwDUjwcOp2BiBA"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-5"
+            >
+              <h3 class="text-white text-xl font-bold">Essential Outerwear</h3>
+              <p class="text-white/80 text-xs">Shop the Archive</p>
+            </div>
+          </div>
+          <!-- Bento Item 2 -->
+          <div
+            class="col-span-1 row-span-2 relative rounded-xl overflow-hidden bg-surface-container-high group"
+          >
+            <img
+              alt="Footwear"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              data-alt="Conceptual sneaker design in monochromatic white"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkD8ZJ-LDyRVVjdih0XRyDvYRWHb7N7KLJWWMyLVgXdKFlWF6GXle0KnxG64c4vpGfxa9ZT_LgGZOwaiOlJDKrcWW6Zj32KnwcgVYzMkTzVKclQ1VKlTt3FcI25UKxJniyYFf-BE6FtMO2dwUY7OLKH-lc4yUB3MITxFzcpiaCiPLli-VLo9usiktjJuNu5qFqVphHR8jBmnL-6dO-VXE4BK8I-LFA3_EWPjxQA2d_sSb2aihUsgivK1QElc3MfcT2IpFiUAR2xQ8"
+            />
+            <div class="absolute inset-0 bg-black/10 flex items-start p-4">
+              <span
+                class="bg-white px-2 py-1 text-[9px] font-black uppercase tracking-tighter"
+                >Footwear</span
+              >
+            </div>
+          </div>
+          <!-- Bento Item 3 -->
+          <div
+            class="col-span-1 row-span-1 relative rounded-xl overflow-hidden bg-surface-container group"
+          >
+            <img
+              alt="Accessories"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              data-alt="Abstract view of silver designer accessories"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuABMXCTO2dJliHw_nj-Iqkori7JoSMb0fJIpHI2vFweh174xT8E-PSGAYtuvMBtu7ZtudWkChLg1E227f_JyhMMjCaxkhD3bDvJ6A7LYhk9lAQWDM9v_JGIuiMfWFsbXi7cb1ASZnqpF2PrqaeIdE_fn2jl_Fjyeaa6RcUNIeISQLecKKdpxPYeHMy1m3EynSq0q7aEF7Nm6LDpL5B3kk226dLMrjlMJjg-0DPxMY7SmJGiliVOqkr285Im6XBrbi26H50jMJPiRh8"
+            />
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span
+                class="bg-black text-white px-3 py-1 text-[10px] font-bold uppercase"
+                >Silver</span
+              >
+            </div>
+          </div>
+          <!-- Bento Item 4 -->
+          <div
+            class="col-span-1 row-span-1 relative rounded-xl overflow-hidden bg-primary-container group"
+          >
+            <div class="p-4 h-full flex flex-col justify-between">
+              <p class="text-white text-lg font-bold leading-tight">
+                Limited Editions
+              </p>
+              <span
+                class="material-symbols-outlined text-white self-end"
+                data-icon="trending_up"
+                >trending_up</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- New Arrivals Section -->
+      <section class="bg-surface-container-low py-12 px-4">
+        <div class="mb-8">
+          <h2 class="text-2xl font-black tracking-tight">New Arrivals</h2>
+          <p class="text-on-surface-variant text-sm mt-1">
+            Freshly curated pieces added today.
+          </p>
+        </div>
+        <!-- Horizontal Scroll Cards -->
+        <div
+          class="flex overflow-x-auto gap-4 pb-4 no-scrollbar -mx-4 px-4 snap-x"
+        >
+          <!-- Product Card 1 -->
+          <div class="min-w-[260px] snap-start flex flex-col gap-3">
+            <div
+              class="aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-lowest relative group"
+            >
+              <img
+                alt="Silk Shirt"
+                class="w-full h-full object-cover"
+                data-alt="Minimalist beige silk shirt on a hanger"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0gQL4cjNkIXQCuuypd2QIs_v_B4dcIT2Zo8XARO6bnAr6k0WHQmvMLzOvPW1ppdHabVHjlImlmiU_o5HYfHT4mbvcPgehvHAEwtZLHoipGy9dVFPFW3tUApNoiQsha3o9n8OiXjCw_BvJ2RkVWc_BKo7mvLH1nc7jpMIOgvX8A5t9HDu1TSAYBengQHjnMD9h_NpohwS8AVpATPLORfb8_SlbsAzZTnyRPr31NdkLX46EsyaB8QCwjxgZW-LXF3lDYRRZP6jMZ9U"
+              />
+              <button
+                class="absolute bottom-3 right-3 bg-white p-2 rounded-full shadow-lg hover:scale-110 transition-transform"
+              >
+                <span
+                  class="material-symbols-outlined text-primary text-sm"
+                  data-icon="add_shopping_cart"
+                  >add_shopping_cart</span
+                >
+              </button>
+            </div>
+            <div>
+              <p
+                class="text-xs font-medium text-primary uppercase tracking-widest"
+              >
+                Minimal
+              </p>
+              <h4 class="text-base font-bold text-on-surface">
+                Fluid Silk Shirt
+              </h4>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-lg font-black">$189.00</span>
+                <span class="text-xs text-on-surface-variant line-through"
+                  >$245.00</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="min-w-[260px] snap-start flex flex-col gap-3">
+            <div
+              class="aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-lowest relative"
+            >
+              <img
+                alt="Trench Coat"
+                class="w-full h-full object-cover"
+                data-alt="Khaki structured trench coat flat lay"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH63uKO2Yro9ecz6LgCEa28DYi9wqYMFTFcJqVFEiJQvqo3h6KwVW8bBpjePJUxU-bH98i_P37L9HJTC9wekjvxXHQefxVR6GipY4yQ8P2RnJYOTb-t7qMBEv0xjwB20isQuIJMEtE54Pk6sar0aduAIlHoy7DjnPIYg4TnY-BnTFzz7KgyRZPAOD9DpJUvjUI3BBcWLEAzM1vSKdHICuHspBny3xBrwBAFLitZUG9AVI-T-VuzyOwYKBNsxUGA9rPrf-XM0vDyiY"
+              />
+              <span
+                class="absolute top-3 left-3 bg-secondary-container text-on-secondary-container px-2 py-1 text-[9px] font-bold uppercase rounded-sm"
+                >Essential</span
+              >
+            </div>
+            <div>
+              <p
+                class="text-xs font-medium text-primary uppercase tracking-widest"
+              >
+                Tailored
+              </p>
+              <h4 class="text-base font-bold text-on-surface">
+                Modular Trench Coat
+              </h4>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-lg font-black">$350.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="w-full py-8 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 flex flex-col items-center gap-4 px-6 w-full opacity-80 hover:opacity-100 transition-opacity"
+    >
+      <span
+        class="text-sm font-bold text-slate-900 dark:text-slate-100 tracking-tighter"
+        >Samarth e-Store</span
+      >
+      <div class="flex gap-6">
+        <a
+          class="font-['Inter'] text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          href="javascript:void(0);"
+          >Privacy</a
+        >
+        <a
+          class="font-['Inter'] text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          href="javascript:void(0);"
+          >Terms</a
+        >
+        <a
+          class="font-['Inter'] text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          href="javascript:void(0);"
+          >Support</a
+        >
+      </div>
+      <p
+        class="font-['Inter'] text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 mt-4"
+      >
+        © 2026&nbsp;Samarth e-Store
+      </p>
+    </footer>
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav
+      class="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-xl border-t border-slate-100 z-50"
+    >
+      <div class="flex justify-around items-center h-16">
+        <!-- Home Active -->
+        <a
+          class="flex flex-col items-center justify-center gap-1 text-blue-700 dark:text-blue-400 transition-all duration-200"
+          href="mobile_landing.html"
+        >
+          <span
+            class="material-symbols-outlined"
+            data-icon="home"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >home</span
+          >
+          <span class="text-[10px] font-bold">Home</span>
+        </a>
+        <a
+          class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 transition-all duration-200"
+          href="mobile_store.html"
+        >
+          <span class="material-symbols-outlined" data-icon="storefront"
+            >storefront</span
+          >
+          <span class="text-[10px] font-medium">Shop</span>
+        </a>
+        <a
+          class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 transition-all duration-200"
+          href="javascript:void(0);"
+        >
+          <span class="material-symbols-outlined" data-icon="auto_awesome"
+            >auto_awesome</span
+          >
+          <span class="text-[10px] font-medium">New</span>
+        </a>
+        <a
+          class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 transition-all duration-200"
+          href="javascript:void(0);"
+        >
+          <span class="material-symbols-outlined" data-icon="person"
+            >person</span
+          >
+          <span class="text-[10px] font-medium">Account</span>
+        </a>
+      </div>
+    </nav>
+    <!-- Spacer for Bottom Nav -->
+    <div class="h-16 md:hidden"></div>
+  </body>
+</html>
