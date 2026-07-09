@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android | Edge AI | Cloud - Portfolio</title>
+
+    <!-- Fonts: Space Grotesk for Display, Inter for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&family=Space+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="/script.js"></script>
+
+    <script>
+
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['Space Mono', 'monospace'],
+                    },
+                    colors: {
+                        // Light Mode Colors
+                        light: {
+                            bg: '#FDFBF7',
+                            surface: '#FFFFFF',
+                            border: '#EAE6E1',
+                            text: '#2D2338',
+                            textMuted: '#6B6375',
+                        },
+                        // Dark Mode Colors
+                        dark: {
+                            bg: '#16131C',
+                            surface: '#221E2A',
+                            border: '#363041',
+                            text: '#F4F0F5',
+                            textMuted: '#A39DAA',
+                        },
+                        // Uncommon Accents that adapt
+                        accent: {
+                            chartreuse: { light: '#6A8000', dark: '#D9F844' }, // Android
+                            blush: { light: '#D9386A', dark: '#FF9DBB' },      // AI
+                            azure: { light: '#0077B6', dark: '#38BDF8' }       // Cloud
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 10s infinite',
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+}
+
+    </script>
+</head>
+
+<body
+    class="bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text antialiased selection:bg-accent-chartreuse-light dark:selection:bg-accent-chartreuse-dark selection:text-white dark:selection:text-dark-bg">
+
+    <div class="noise-overlay"></div>
+
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="font-display text-2xl font-bold tracking-tighter">
+                        <span class="text-accent-chartreuse-light dark:text-accent-chartreuse-dark">&lt;</span>Dev<span
+                            class="text-accent-blush-light dark:text-accent-blush-dark">/&gt;</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Links & Theme Toggle -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home"
+                        class="text-light-textMuted hover:text-light-text dark:text-dark-textMuted dark:hover:text-dark-text text-sm font-medium transition-colors">Home</a>
+                    <a href="#about"
+                        class="text-light-textMuted hover:text-light-text dark:text-dark-textMuted dark:hover:text-dark-text text-sm font-medium transition-colors">About</a>
+                    <a href="#skills"
+                        class="text-light-textMuted hover:text-light-text dark:text-dark-textMuted dark:hover:text-dark-text text-sm font-medium transition-colors">Stack</a>
+                    <a href="#projects"
+                        class="text-light-textMuted hover:text-light-text dark:text-dark-textMuted dark:hover:text-dark-text text-sm font-medium transition-colors">Work</a>
+
+                    <button id="theme-toggle"
+                        class="p-2 rounded-full bg-light-surface dark:bg-dark-surface border border-light-border dark:border-dark-border hover:scale-105 transition-transform">
+                        <i data-lucide="sun" class="w-4 h-4 show-dark text-accent-chartreuse-dark"></i>
+                        <i data-lucide="moon" class="w-4 h-4 show-light text-accent-blush-light"></i>
+                    </button>
+
+                    <a href="#contact"
+                        class="bg-light-text text-light-bg dark:bg-dark-text dark:text-dark-bg px-5 py-2 rounded-full text-sm font-medium transition-transform hover:scale-105">Connect</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Ambient Background Orbs -->
+        <div
+            class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-chartreuse-light/20 dark:bg-accent-chartreuse-dark/10 rounded-full blur-[100px] animate-blob z-0">
+        </div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-blush-light/20 dark:bg-accent-blush-dark/10 rounded-full blur-[100px] animate-blob z-0"
+            style="animation-delay: 2s;"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent-azure-light/10 dark:bg-accent-azure-dark/10 rounded-full blur-[100px] animate-blob z-0"
+            style="animation-delay: 4s;"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
+            <div
+                class="inline-flex items-center px-4 py-1.5 rounded-full border border-light-border dark:border-dark-border bg-light-surface/50 dark:bg-dark-surface/50 backdrop-blur-sm text-sm font-mono mb-8 reveal">
+                <span
+                    class="flex w-2 h-2 rounded-full bg-accent-chartreuse-light dark:bg-accent-chartreuse-dark mr-3 animate-pulse"></span>
+                <span class="text-light-textMuted dark:text-dark-textMuted">Executing 12-Month Sprint</span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-display font-bold tracking-tight mb-6 reveal"
+                style="animation-delay: 100ms;">
+                Architecting the future of <br class="hidden md:block" />
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-accent-chartreuse-light to-accent-blush-light dark:from-accent-chartreuse-dark dark:to-accent-blush-dark">Intelligent
+                    Mobile</span>
+            </h1>
+
+            <p class="mt-6 text-lg md:text-xl text-light-textMuted dark:text-dark-textMuted max-w-2xl mx-auto font-light reveal"
+                style="animation-delay: 200ms;">
+                Software Engineer specializing in Native Android, Edge AI, and Cloud Infrastructure. Building
+                hardware-optimized, offline-first experiences.
+            </p>
+
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4 reveal" style="animation-delay: 300ms;">
+                <a href="#projects"
+                    class="px-8 py-3.5 rounded-full bg-light-text text-light-bg dark:bg-dark-text dark:text-dark-bg font-medium transition-transform hover:scale-105 flex items-center justify-center gap-2">
+                    View My Work <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+                </a>
+                <a href="#"
+                    class="px-8 py-3.5 rounded-full glass-card font-medium flex items-center justify-center gap-2">
+                    <i data-lucide="github" class="w-5 h-5"></i> GitHub Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="mb-16 reveal">
+                <h2 class="text-3xl font-display font-bold tracking-tight sm:text-4xl">The X10 Tech Stack</h2>
+                <p class="mt-4 text-light-textMuted dark:text-dark-textMuted font-mono text-sm">Targeting high-ROI
+                    hardware/software integration.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Native Android -->
+                <div class="glass-card rounded-3xl p-8 reveal">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-accent-chartreuse-light/10 dark:bg-accent-chartreuse-dark/10 flex items-center justify-center mb-6 border border-accent-chartreuse-light/20 dark:border-accent-chartreuse-dark/20">
+                        <i data-lucide="smartphone"
+                            class="w-6 h-6 text-accent-chartreuse-light dark:text-accent-chartreuse-dark"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-bold mb-4">Native Android</h3>
+                    <ul class="space-y-3 font-mono text-sm text-light-textMuted dark:text-dark-textMuted">
+                        <li class="flex items-center gap-3"><span
+                                class="w-1.5 h-1.5 rounded-full bg-accent-chartreuse-light dark:bg-accent-chartreuse-dark"></span>
+                            Kotlin 2.2+ & Coroutines</li>
+                        <li class="flex items-center gap-3"><span
+                                class="w-1.5 h-1.5 rounded-full bg-accent-chartreuse-light dark:bg-accent-chartreuse-dark"></span>
+                            Jetpack Compose (MVI)</li>
+                        <li class="flex items-center gap-3"><span
+                                class="w-1.5 h-1.5 rounded-full bg-accent-chartreuse-light dark:bg-accent-chartreuse-dark"></span>
+                            Room & Offline-First</li>
+                        <li class="flex items-center gap-3"><span
+                                class="w-1.5 h-1.5 rounded-full bg-accent-chartreuse-light dark:bg-accent-chartreuse-dark"></span>
+                            Dagger/Hilt DI</li>
+                    </ul>
+                </div>
+
+                <!-- Edge AI -->
+                <div class="glass-card rounded-3xl p-8 reveal" style="animation-delay: 100ms;">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-accent-blush-light/10 dark:bg-accent-blush-dark/10 flex items-center justify-center mb-6 border border-accent-blush-light/20 dark:border-accent-blush-dark/20">
+                        <i data-lucide="cpu" class="w-6 h-6 text-accent-blush-light dark:text-accent-blush-dark"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-bold mb-4">Edge AI</h3>
+                    <ul class="space-y-3 font-mono text-sm text-light-textMuted dark:text-dark-textMuted">
+                        <li class="flex items-center gap-3"><span
+                                class="w-1.5 h-1.5 rounded-full bg-accent-blush-light dark:bg-accent-blush-dark"></span>
+                            Gemini Nano (AICore)</li>
+                        <li class="flex items-center gap-3"><span
+                                class="w-1.5 h-1.5 rounded-full bg-accent-blush-light dark:bg-accent-blush-dark"></span>
+                            TensorFlow Lite</li>
+                        <li class="flex items-center gap-3"><span
+                                class="w-1.5 h-1.5 rounded-full bg-accent-blush-light dark:bg-accent-blush-dark"></span>
+                            MediaPipe Vision Tasks</li>
+                        <li class="flex items-center gap-3"><span
+                                class="w-1.5 h-1.5 rounded-full bg-accent-blush-light dark:bg-accent-blush-dark"></span>
+                            Memory Optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Cloud DevOps -->
+                <div class="glass-card rounded-3xl p-8 reveal" style="animation-delay: 200ms;">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-accent-azure-light/10 dark:bg-accent-azure-dark/10 flex items-center justify-center mb-6 border border-accent-azure-light/20 dark:border-accent-azure-dark/20">
+                        <i data-lucide="cloud" class="w-6 h-6 text-accent-azure-light dark:text-accent-azure-dark"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-bold mb-4">Cloud & DevOps</h3>
+                    <ul class="space-y-3 font-mono text-sm text-light-textMuted dark:text-dark-textMuted">
+                        <li class="flex items-center gap-3"><span
+                                class="w-1.5 h-1.5 rounded-full bg-accent-azure-light dark:bg-accent-azure-dark"></span>
+                            Fastlane Mobile CI/CD</li>
+                        <li class="flex items-center gap-3"><span
+                                class="w-1.5 h-1.5 rounded-full bg-accent-azure-light dark:bg-accent-azure-dark"></span>
+                            GitHub Actions</li>
+                        <li class="flex items-center gap-3"><span
+                                class="w-1.5 h-1.5 rounded-full bg-accent-azure-light dark:bg-accent-azure-dark"></span>
+                            Google Cloud (GCP)</li>
+                        <li class="flex items-center gap-3"><span
+                                class="w-1.5 h-1.5 rounded-full bg-accent-azure-light dark:bg-accent-azure-dark"></span>
+                            Firebase Infrastructure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-end justify-between mb-16 reveal">
+                <div>
+                    <h2 class="text-3xl font-display font-bold tracking-tight sm:text-4xl">Featured Work</h2>
+                    <p class="mt-4 text-light-textMuted dark:text-dark-textMuted font-mono text-sm">Production-ready
+                        capstone projects.</p>
+                </div>
+                <a href="#"
+                    class="hidden md:flex items-center gap-2 text-sm font-medium hover:text-accent-chartreuse-light dark:hover:text-accent-chartreuse-dark transition-colors">
+                    View all GitHub <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Project 1 (Featured Full Width) -->
+                <div
+                    class="glass-card rounded-3xl overflow-hidden group reveal lg:col-span-2 flex flex-col md:flex-row">
+                    <div
+                        class="w-full md:w-1/2 h-64 md:h-auto bg-light-surface dark:bg-dark-surface relative overflow-hidden flex items-center justify-center border-b md:border-b-0 md:border-r border-light-border dark:border-dark-border">
+                        <!-- Abstract Visual representation -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-accent-chartreuse-light/10 to-accent-blush-light/10 dark:from-accent-chartreuse-dark/10 dark:to-accent-blush-dark/10">
+                        </div>
+                        <i data-lucide="bot"
+                            class="w-24 h-24 text-light-textMuted/30 dark:text-dark-textMuted/30 group-hover:scale-110 group-hover:text-accent-chartreuse-light dark:group-hover:text-accent-chartreuse-dark transition-all duration-500"></i>
+                    </div>
+                    <div class="p-8 md:p-12 w-full md:w-1/2 flex flex-col justify-center">
+                        <div class="flex gap-2 mb-6 flex-wrap">
+                            <span
+                                class="px-3 py-1 rounded-full bg-light-border dark:bg-dark-border text-xs font-mono font-medium">Kotlin</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-accent-chartreuse-light/10 dark:bg-accent-chartreuse-dark/10 text-accent-chartreuse-light dark:text-accent-chartreuse-dark text-xs font-mono font-medium">Gemini
+                                Nano</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-light-border dark:bg-dark-border text-xs font-mono font-medium">Compose</span>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold mb-4">Neural Notes (Offline-First)</h3>
+                        <p class="text-light-textMuted dark:text-dark-textMuted leading-relaxed mb-8">
+                            A privacy-focused Android application that utilizes AICore and Gemini Nano to summarize
+                            meetings, generate action items, and organize thoughts entirely on-device, bypassing cloud
+                            APIs to ensure complete data security and zero latency.
+                        </p>
+                        <div class="flex gap-6 mt-auto">
+                            <a href="#"
+                                class="flex items-center gap-2 font-medium hover:text-accent-chartreuse-light dark:hover:text-accent-chartreuse-dark transition-colors">
+                                <i data-lucide="github" class="w-5 h-5"></i> Code
+                            </a>
+                            <a href="#"
+                                class="flex items-center gap-2 font-medium hover:text-accent-blush-light dark:hover:text-accent-blush-dark transition-colors">
+                                <i data-lucide="external-link" class="w-5 h-5"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col reveal">
+                    <div class="flex justify-between items-start mb-8">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-light-surface dark:bg-dark-surface flex items-center justify-center border border-light-border dark:border-dark-border">
+                            <i data-lucide="git-merge"
+                                class="w-6 h-6 text-accent-azure-light dark:text-accent-azure-dark"></i>
+                        </div>
+                        <a href="#"
+                            class="text-light-textMuted hover:text-light-text dark:text-dark-textMuted dark:hover:text-dark-text transition-colors"><i
+                                data-lucide="github" class="w-5 h-5"></i></a>
+                    </div>
+                    <h3 class="text-xl font-display font-bold mb-3">Automated Play Deployer</h3>
+                    <p class="text-light-textMuted dark:text-dark-textMuted leading-relaxed mb-8 flex-grow">
+                        A complete CI/CD pipeline built with Fastlane and GitHub Actions. Automates building, signing,
+                        and deploying Android App Bundles (AAB) to Google Play internal tracks upon merging.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mt-auto">
+                        <span
+                            class="text-xs font-mono text-accent-azure-light dark:text-accent-azure-dark">Fastlane</span>
+                        <span class="text-xs font-mono text-accent-azure-light dark:text-accent-azure-dark">GitHub
+                            Actions</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col reveal" style="animation-delay: 100ms;">
+                    <div class="flex justify-between items-start mb-8">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-light-surface dark:bg-dark-surface flex items-center justify-center border border-light-border dark:border-dark-border">
+                            <i data-lucide="activity"
+                                class="w-6 h-6 text-accent-blush-light dark:text-accent-blush-dark"></i>
+                        </div>
+                        <a href="#"
+                            class="text-light-textMuted hover:text-light-text dark:text-dark-textMuted dark:hover:text-dark-text transition-colors"><i
+                                data-lucide="github" class="w-5 h-5"></i></a>
+                    </div>
+                    <h3 class="text-xl font-display font-bold mb-3">Hardware Thermal Monitor</h3>
+                    <p class="text-light-textMuted dark:text-dark-textMuted leading-relaxed mb-8 flex-grow">
+                        A low-level Native Android tool demonstrating hardware understanding. Uses Coroutines to poll
+                        battery temperature and CPU usage, displaying real-time metrics using Compose Canvas.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mt-auto">
+                        <span
+                            class="text-xs font-mono text-accent-blush-light dark:text-accent-blush-dark">Coroutines</span>
+                        <span class="text-xs font-mono text-accent-blush-light dark:text-accent-blush-dark">Compose
+                            Canvas</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="border-t border-light-border dark:border-dark-border py-12 mt-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <a href="#" class="font-display text-xl font-bold tracking-tighter">
+                    <span class="text-accent-chartreuse-light dark:text-accent-chartreuse-dark">&lt;</span>Dev<span
+                        class="text-accent-blush-light dark:text-accent-blush-dark">/&gt;</span>
+                </a>
+                <p class="text-light-textMuted dark:text-dark-textMuted text-sm mt-2 font-mono">Architecting 2026 and
+                    beyond.</p>
+            </div>
+
+            <div class="flex gap-6">
+                <a href="#"
+                    class="text-light-textMuted hover:text-light-text dark:text-dark-textMuted dark:hover:text-dark-text transition-colors"><span
+                        class="sr-only">GitHub</span><i data-lucide="github" class="w-5 h-5"></i></a>
+                <a href="#"
+                    class="text-light-textMuted hover:text-light-text dark:text-dark-textMuted dark:hover:text-dark-text transition-colors"><span
+                        class="sr-only">LinkedIn</span><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                <a href="#"
+                    class="text-light-textMuted hover:text-light-text dark:text-dark-textMuted dark:hover:text-dark-text transition-colors"><span
+                        class="sr-only">Email</span><i data-lucide="mail" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
